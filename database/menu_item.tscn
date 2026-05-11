@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://b07dcvsp07i05"]
+
+[ext_resource type="Script" uid="uid://vwu4cyrsyluf" path="res://database/menu_item.gd" id="1_7i8jb"]
+[ext_resource type="Texture2D" uid="uid://dyky822uumq33" path="res://database/images/Actor.png" id="1_oglio"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ywsv5"]
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ywsv5"]
+
+[node name="Menu_item" type="Panel"]
+custom_minimum_size = Vector2(1, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource("1_7i8jb")
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="AspectRatioContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("1_oglio")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -25.0
+offset_top = -23.0
+offset_right = 25.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Actors"
+label_settings = SubResource("LabelSettings_ywsv5")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ywsv5")
+
+[connection signal="resized" from="." to="." method="_on_resized"]

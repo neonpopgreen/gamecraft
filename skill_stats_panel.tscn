@@ -1,0 +1,198 @@
+[gd_scene format=3 uid="uid://dcdmpnl3yoj4n"]
+
+[node name="Skill_stats_panel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 8.58
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "skill stats :"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+text = " skill type : "
+
+[node name="OptionButton" type="OptionButton" parent="Panel/VBoxContainer/HBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+item_count = 2
+popup/item_0/text = "melee"
+popup/item_0/id = 0
+popup/item_1/text = "range"
+popup/item_1/id = 1
+
+[node name="Panel2" type="Panel" parent="Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer/Panel2/VBoxContainer"]
+layout_mode = 2
+text = "target : "
+
+[node name="OptionButton" type="OptionButton" parent="Panel/VBoxContainer/HBoxContainer/Panel2/VBoxContainer"]
+layout_mode = 2
+item_count = 4
+popup/item_0/text = "self"
+popup/item_0/id = 0
+popup/item_1/text = "enemy"
+popup/item_1/id = 1
+popup/item_2/text = "ally"
+popup/item_2/id = 2
+popup/item_3/text = "all"
+popup/item_3/id = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer2/Panel/VBoxContainer"]
+layout_mode = 2
+text = "cost type : "
+
+[node name="OptionButton" type="OptionButton" parent="Panel/VBoxContainer/HBoxContainer2/Panel/VBoxContainer"]
+layout_mode = 2
+item_count = 3
+popup/item_0/text = "mp"
+popup/item_0/id = 0
+popup/item_1/text = "hp"
+popup/item_1/id = 1
+popup/item_2/text = "stamina"
+popup/item_2/id = 2
+
+[node name="Panel2" type="Panel" parent="Panel/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer2/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="value" type="Label" parent="Panel/VBoxContainer/HBoxContainer2/Panel2/VBoxContainer"]
+layout_mode = 2
+text = "cost value : "
+
+[node name="OptionButton" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer2/Panel2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Panel3" type="Panel" parent="Panel/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer2/Panel3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="value" type="Label" parent="Panel/VBoxContainer/HBoxContainer2/Panel3/VBoxContainer"]
+layout_mode = 2
+text = "cooldown : "
+
+[node name="OptionButton" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer2/Panel3/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer3/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer3/Panel/VBoxContainer"]
+layout_mode = 2
+text = "animation vfx : "
+
+[node name="OptionButton" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer3/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Panel2" type="Panel" parent="Panel/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer3/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer3/Panel2/VBoxContainer"]
+layout_mode = 2
+text = "conditions : "
+
+[node name="OptionButton" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer3/Panel2/VBoxContainer"]
+layout_mode = 2

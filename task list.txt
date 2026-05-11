@@ -1,0 +1,128 @@
+- - - to do list - - -
+- git upload o push , pag may net , kasi nakita ko ang battery nitong asus lumalaki baka pumutok na ngayun haha , juntis najuntis na , mangagnanak na ng pagkawasak 
+- item ok na next weaons 
+- iconized and shortcut keys all things to promote fast making , commonly used and always used must be implemented first
+- analize the battery kung pwede lagyan ng ibang battery , like 10000mah kung kasya 
+- buy ssd for hp to add storage , 265gb is fine basta ssd , health 95 pataas
+- icon sa items at weapon , add weapon model   
+- tooltip all ui , yung iba hindi pa at iba ang tooltip 
+- icon ng tier gawing border nila hindi lang color 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+session 14 , 7 - 
+- nag dl ng bagong godot , malupet , iba na ang look , d na dark look , naging black sya at yung font , flat payat 
+
+session 14 , may 10 2026 sun , 4 - 
+- adding model viewer to weapon gui 
+- adding icon of weapon 
+
+session 13 , may 9 2026 sat , 7 - ?
+- pinagmasdan ang weapon scene , natuwa hehe
+- nag add ng icon at tier sa weapon , gumamit ng noice kasi walang solid color lang , ang ganda haha 
+
+session 12 , april 29 2026 , 3:24 - 
+- - - intent - - -
+- plan for weapons 
+- do weapon  
+- palagay ko , types of weapon yung popular at genre lang , yung mga d naman pop like claw glove na nasa rpgmv wag na muna 
+- nahihilo na ako tigil na ako , baka lumala 
+- ok naman na for demo ang weapons ang damage parameters lang d ko tinaggal 
+
+session 11 , april 23 2026 , 4:20 - 6:12 , 1.9+ hrs , 5:15 palang sa real clock late tong lappy time sabi 6:12 na haha
+- 10 days nag unity essentials kakatapos lang kaya bumalik ako dito 
+- 1 hr lang dapat to tapos mag story at unity na
+- na check ang currently na ginagawang gui ang skills prang ok na sha tapos na 
+- na culture shock ako sa godot , qwersg keys shortcut pala sa godot , sa unity lagi kong ginagamit ang shortcut keys qwerty ara sa scene tools pampabilis , ngayun nagagawa ko sa godot yung skills nato 
+- nakita ko ang skill redme , daming d pa implemented pero ok lang kase demo palang 
+- - - intent - - - 
+- gui check , ok
+- gui ituloy , items next 
+- - - doing - - -
+- copied the skill kasi updated sya kesa sa mga old like chars and classes walang filter list sort list etc
+- editing the copied to make it items , looked at rpg mv to get res
+- - - done - - -
+- items ok na, next weapons 
+
+
+session 10 , mon march 30 2026 , 6:30-7:25, 7:40 - 10-11
+- - - intent - - -
+- analizing warcraft skills 
+- tigil muna sa pag analize , tyaka na completuhin , ang priority , demo 
+- resting eyes , lakad lakad para makapag rest , kase sumasaket mata lagi ngayung week 
+- damage panel of skill menu , done
+- skill type panel of menu skill , done
+
+
+session 9 , sun march 29 2026 , 6:30 - 7:03 
+- - - intent - - -
+- importing kenney assets , d pala angkop , sa ngayun ganito lang muna 
+
+session 8 , fri march 27 2026 , 1:20 - 3:30
+- - - intent - - -
+- planning about skills , what to implement , lists , types , for ui
+- adds sort and filter and add from net to listing gui , in skills , kase madami sya , need nya filter   
+- analyzing warcraft kada skill, matagal
+
+session 7 , tue march 24 2026 , 3:55 - 
+- - - intent - - -
+- continue 
+- documentation ng menu_item class / setup function  then ang version nito 
+- tigil muna ang pag edit ng pc_notes_for_menu_for_db
+- - - problem - - -
+- i dont know how to use MenuButton and PopupMenu node , no signal in its item , how do i know if the item is clicked ?
+
+
+session 6 , mon march 23 2026 , 5:15 - 5:44 , 8:53 - 10:08 , 2hrs
+- - - intent - - -
+- continue ui , for class
+- default ui for db menu
+- note tabified , fixing it to be functionable
+- - - done - - -  
+- fixing database_gui.gd , to ver 2 
+
+session 5 , fri march 20 2026 , 3 - 4
+- - - intent - - -
+- continue ui , for class 
+- 
+
+session 4 , tue march 17 2026 , 9 - 
+- - - intent - - -
+- continue ui for characters 
+- finished characters 
+
+session 3 , mon march 16 2026 , 9 - 10 , 
+- - - intent - - -
+- continue ui for actors
+- ui contains 
+- left top (stats , equipment , special unique traits)
+- left bottom , notes tabified 
+- right , design profile ,
+
+session 2 , mon march 9 2026 , 5:13 - 7:11 ,8:07 - 9:50 , 3.5 hrs 
+- - - intent - - -
+- continue menu item
+- use grid for menu items , than using vbox and hbox containers 
+- create data of buttons , actors , class , enemies , etc 
+- - - problem - - -
+- font size ng label need pala dumaan muna sa label_setings , $Label.label_settings.font_size = label_size ,done 
+- menu items is pressed and stacked like cards , use custom_minimum_size.y = size.x not size.y = size.x  , done
+- no label , my code no error but throws error , the error say font size is zero , the problem is this , $Label.label_settings.font_size = size.x * percent , size.x is zero so the label vanish , change it to size.y ,because x is the vertical and y is horizontal 
+- - - done - - -
+- menu buttons shows ok 
+- done errors 
+- - - next to do - - -
+- items in tab unahin ang actor
+
+
+session 1 , sat march 7 2026 , 7:40 - 9:20 , 3hrs
+- - - intent - - -
+- ui for database 
+- training
+- - - done - - -
+- panel that adapt , ok 
+- create icon place holder using paint
+- - - unfinised - - -
+- menu buttons , semi finished
+- button hover , sami finished
+- button adaped in screen size , by not using minimum size y 90 of hBoxContainer
+- make the button as individual so when changed , all will be changed , to reduce one by one editing 

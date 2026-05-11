@@ -1,0 +1,284 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmxtwuw76wumj"]
+
+[ext_resource type="Texture2D" uid="uid://dkqeydeecvgj8" path="res://database/images/Maximize.png" id="1_ynsyh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ynsyh"]
+font_size = 30
+
+[node name="Item_panel_1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Parameters :  "
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer2/Panel/VBoxContainer"]
+layout_mode = 2
+text = "type : "
+
+[node name="OptionButton" type="OptionButton" parent="Panel/VBoxContainer/HBoxContainer2/Panel/VBoxContainer"]
+layout_mode = 2
+selected = 0
+item_count = 6
+popup/item_0/text = "Regular Item"
+popup/item_0/id = 0
+popup/item_1/text = "Key item"
+popup/item_1/id = 1
+popup/item_2/text = "Special item"
+popup/item_2/id = 2
+popup/item_3/text = "Secret Item"
+popup/item_3/id = 5
+popup/item_4/text = "Other"
+popup/item_4/id = 4
+popup/item_5/text = "Add one "
+popup/item_5/id = 3
+
+[node name="Panel4" type="Panel" parent="Panel/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer2/Panel4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer2/Panel4/VBoxContainer"]
+layout_mode = 2
+text = "animation :"
+
+[node name="OptionButton" type="OptionButton" parent="Panel/VBoxContainer/HBoxContainer2/Panel4/VBoxContainer"]
+layout_mode = 2
+item_count = 6
+popup/item_0/text = "0% , no crit "
+popup/item_0/id = 0
+popup/item_1/text = "30 %"
+popup/item_1/id = 1
+popup/item_2/text = "20%"
+popup/item_2/id = 2
+popup/item_3/text = "based on users stats"
+popup/item_3/id = 3
+popup/item_4/text = "physical"
+popup/item_4/id = 4
+popup/item_5/text = "special"
+popup/item_5/id = 5
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="Panel4" type="Panel" parent="Panel/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer4/Panel4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer4/Panel4/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "When this item used , it will lost , consumed  "
+text = "consumable  : "
+
+[node name="OptionButton" type="OptionButton" parent="Panel/VBoxContainer/HBoxContainer4/Panel4/VBoxContainer"]
+layout_mode = 2
+flat = true
+selected = 1
+item_count = 2
+popup/item_0/text = "Yes"
+popup/item_0/id = 0
+popup/item_1/text = "No"
+popup/item_1/id = 1
+
+[node name="Panel2" type="Panel" parent="Panel/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer4/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer4/Panel2/VBoxContainer"]
+layout_mode = 2
+text = "Prize : "
+
+[node name="LineEdit" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer4/Panel2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "0"
+
+[node name="Panel3" type="Panel" parent="Panel/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer4/Panel3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer4/Panel3/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "Selling prize in percent "
+text = "Sell (%)  : "
+
+[node name="LineEdit" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer4/Panel3/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "80"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="Panel4" type="Panel" parent="Panel/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer3/Panel4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer3/Panel4/VBoxContainer"]
+layout_mode = 2
+text = "target scope  : "
+
+[node name="OptionButton" type="OptionButton" parent="Panel/VBoxContainer/HBoxContainer3/Panel4/VBoxContainer"]
+layout_mode = 2
+flat = true
+selected = 0
+item_count = 6
+popup/item_0/text = "User"
+popup/item_0/id = 5
+popup/item_1/text = "Ally"
+popup/item_1/id = 0
+popup/item_2/text = "Enemy"
+popup/item_2/id = 1
+popup/item_3/text = "Allies All"
+popup/item_3/id = 4
+popup/item_4/text = "Weapon"
+popup/item_4/id = 2
+popup/item_5/text = "Dead"
+popup/item_5/id = 3
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer3/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer3/Panel/VBoxContainer"]
+layout_mode = 2
+text = "Success Rate % : "
+
+[node name="OptionButton" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer3/Panel/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "100"
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 63.06)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+text = "code : "
+
+[node name="TextEdit" type="TextEdit" parent="Panel/VBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "insert code here 
+var target_used 
+Settings settings 
+// pythonized code or gdsript or both "
+
+[node name="TextureButton" type="TextureButton" parent="Panel/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+tooltip_text = "use code instead ? "
+texture_normal = ExtResource("1_ynsyh")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 665.0
+offset_right = 325.0
+offset_bottom = 707.0
+text = "succces , animation "
+label_settings = SubResource("LabelSettings_ynsyh")
