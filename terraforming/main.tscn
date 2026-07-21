@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cgnxdiascpk5w"]
+
+[ext_resource type="Script" uid="uid://btk4qfbyahnry" path="res://terraforming/sprite_2d.gd" id="1_mejx5"]
+[ext_resource type="Texture2D" uid="uid://dlb4kyr5j3mnk" path="res://ress/output-onlinepngtools (2).png" id="2_7mr47"]
+[ext_resource type="Texture2D" uid="uid://daigbvlix4x02" path="res://database/images/Weapons.png" id="2_wjedy"]
+
+[node name="Main" type="Node2D" unique_id=1410189916]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=882857008]
+position = Vector2(40, 40)
+centered = false
+script = ExtResource("1_mejx5")
+brush_texture = ExtResource("2_7mr47")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1786223555]
+texture = ExtResource("2_wjedy")

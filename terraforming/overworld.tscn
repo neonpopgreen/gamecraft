@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cjkjb5uvgvgq0"]
+
+[ext_resource type="PackedScene" uid="uid://cq1xp66vfsfrm" path="res://terraforming/overworld_gui.tscn" id="1_xone3"]
+
+[node name="Overworld" type="Node2D" unique_id=156124241]
+
+[node name="overworld gui" parent="." unique_id=215126832 instance=ExtResource("1_xone3")]

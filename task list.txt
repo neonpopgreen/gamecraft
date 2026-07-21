@@ -7,10 +7,341 @@
 - icon sa items at weapon , add weapon model   
 - tooltip all ui , yung iba hindi pa at iba ang tooltip 
 - icon ng tier gawing border nila hindi lang color 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+- mala warcraft na coding with  gdsript , and more like a visual scripting , scratch like 
+- when finished the gui , make it built it in code for scalability , and easy making and edit things 
+- priority : make the game exist first , then fix it , 
+- polish performance : at session 31 , make the trees and other object as one node  
+- polish performance : session 34 , better than minecraft optimization 
+- problem at session 33 ,  ok na to pero check mo 
+- problem or not , in session 39 , placing a block outside range 
+- polish performance : in session 49 , make the code as shader , fragment shader 
+- polish performance : in session 50 , make it like old map , and use shader not pool of sprite2d
+- - - next todo - - - - - - - - - - - - - - - - - - - - - - - -
+- prio : low , greedy meshing and threading inside mesh class and shader in greedy meshing, kahit wag muna to kasi , make exist ang goal 
+- prio : med , saving edited blocks
+- prio : high , uv mapping 
+- prio : high , minecraft creative mode
+- rpgmv demo na , session 42 , terrain , player , mobs , quest and leveling 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+hatiin ang mga work load 
+- intro graphics like rpg mv ,logo ko with art , you can use ai , done /
+- like godot , will show list of project then the opening scene , done /
+- first screen , the map the toolbars the player , i expect
+- will show what map to load , premade map or custom map , size , premade map with pictures 
+- map edit , event edit , 
+- map edit , top down for terraforming 
+- map edit : point , line , rectangular , circle , selection tool , 'fill', search minecraft creative tools
+- map edit : minecraft tools list , stand alone : worldPainter , amulet , 3rd party mod :
+- two types of run , map only flying or not , run the whole game , 
+- terra forming 2 modes , painting mode zoom in , zoom out will be like overworld map ng rpg mv , one cell will be 8 will be 8*32=256 blocks wide
+- - - - - - - - - - - - - - - - - - - - - - - - - -
+session 56 , july 21 2026 tue , 1:17pm
+- tapusin ang add_data_to_json()
+- test the json script 
+- - - test - - -
+- write a new json , then do it again 
+- replace func 
+- add data to json func 
 
-session 14 , 7 - 
+session 55 , july 20 2026 mon , 5:30pm - 7:30pm ,putol kumain
+- continue json script
+- done : replace_json() , read_a_json_file_then_returns_as_dictionary() , add_data_to_json()
+- next : testing the json codes , use the ready of itself to test it 
+
+session 54 , july 18 2026 , 1:37pm - 11pm
+- search : how to get the dictionary key as value in godot , ok na
+- pag may saving na alamin na ang project folder sistema , doing
+- - - todo - - -
+- folder : game_name , inside : folder biome 
+- lagyan na ng main scene tapos nasa project list na yung main scene , 
+- yung main scene completuhin mona , reading all projects , project folder default path and other path , create new project
+- done -
+- intro setting up editor_data.json
+- json singleton : doing
+
+session 53 , july 17 2026 , 11pm - 11:36 pm
+-  kumuha gamot kaya ginabi na 
+- 11:36pm na kaya matulog na ako mag rereview pa ako kasi prelim exam na 
+- - - todo - - - 
+- clickable object and biome
+- data of all object and biome , addable biome at object 
+- try adding a tileset tile 
+- try json to save biome data
+- dl vid tutorial of tileset 
+
+session 52 , july 16 2026 thu , 8:55pm - 10:30 , putol , minadali ko hehe
+- intro settings popup menu , size , fill with 
+- search : add tileset cell if programmaticable or in editor only , if not programmaticable dont use tileset , yes its programaticable
+- done : intro param , populate tiles from intro data   
+- reward : mag laro kana ng castle fignt , nagawa ko ng magisa haha no internet needed 
+
+
+session 51 , july 15 2026 wed , 3:33pm - 10:45pm , putol putol
+- continue session 50
+- next : mountains trees etc , done
+- using tilemap layer instead of many spite 2d in canvasgroup
+- natapos ko na yung pag place ng objects , done , ang hirap haha ,pero ramdam ko na nandyaan ang dyos para saakin , supportado ako kahit sinner ako 
+- galawan ko ang hirap pero nagawa parin haha , nag onting google pero ako talaga gumawa 
+
+session 50 , july 14 2026 tue , 10:40 pm - 12:12pm
+- na inspire ako kaya humabol ako , nakasalubong si alfred sa trisikilan , aix parin sya tapos si tangkad girl at liit girl medyo na ewan ako ngayun kaya gusto ko ulit galingan sa buhay salamat sa dyos 
+- kanina kasi wla akong producrtivity kasi nag fb lang at bold at laro ng castle fight 
+- terraforming via overworld 
+- get the pics of rpg mv overworld 
+- intro question/parameters , what biome as base ? , size based on 32x32x32 , 
+- so some placing of objects , pallet
+- optimization : make it like old map , and use shader not pool of sprite2d
+- - - doing - - -
+- nag dl ng mga texture sa internet , done 
+- nagawa yung biome panel at contents nito 
+- next : mountains trees etc , done
+- using tilemap layer instead of many spite 2d in canvasgroup
+ 
+
+session 49 , july 13 2026 mon , 5:26pm 
+- kahapon nag ccf kaya d naka gawa 
+- tuloy ang painting 
+- optimize the script to be a shader 
+- done : brush image , 6:53pm natapos 
+- nest : over world editor of rpgmv , biome , mountain etc , make it epic fantasy theme drawing old paper brown ink 
+- checking rpg mv overworld editor 
+
+session 48 , july 11 2026 , 7:45pm - 11:36pm , putolputol at saglit lang nagawa mga 30 mins 
+- finish the paint tutorial
+- dl the project , cant its not free , naka patreon
+- done : painting and brush size
+
+
+session 47 , july 10 2026 7am - 11pm , putol putol
+- d counted kahapon kasi planing lang 
+- nag add sa signal tutorial ng show data type 
+- nag code ng painting tutorial pero d tapos 
+
+session 46 ,july 8 2026 , 1hr lang to d nag code just doing thing related to this 
+- planning , dl the world painter , found a site that generate terrain with noise goods sya maraming features
+- terra form : 
+	look for reference like teraform dl it
+- look for image editor  
+
+
+session 45 , july 6 2026 tue , 1:37pm - 3:30pm  , 
+- first map ,flat , height map , what biome , size
+- next : minecraft mode , coding na to haha yes d na ako mgangangapa ng task , nitong mga araw kasi confused ako kaya takot buksan godot haha
+- next : top down terraforming , with mini first person cam , kelangan ko dito ng reference siguro ito muna bago minecraft mode kasi , kelangan mo ng place to build diba , yun ang process kasi 
+- next : actuality , wag muna to tapusin muna ang first steps ng pag open nito  
+
+session 44 , july 6 2026 mon , 4:47pm - 9:18pm , putol putol
+- intro image must have , place image , lettering image , characters  , doing now , ok na  
+- project list window must have , big image with many more image when clicked  logo, name , date made date modified , ok na 
+
+session 43 , july 5 2026 , 9:40pm
+- busy day to kaya ngayun lang at sinaglit ko lang to para mag plano at mapadali ang next kong session  
+
+session 42 , july 4 2026 , 5:27pm putol putol 10:18pm
+- gui finished (binilisan ko) , system premade biomes blocks
+- apat haha nag story ako kanina 1 hr so dalawa nagawa ko , pero parang kulang parin
+- next , mala rpg mv full demo na , terrain , player , mobs , quest and leveling 
+- step by step , kung ano unang makita sa rpg mv yun ang una kong gagawin 
+
+session 41 , july 3 2026 , 4:40pm
+- nagawa ang quest kaso yun lang nakukulangan ako wala ako pasok dapat madami ako nagawa kaso ang inasikaso ko gaming at fb yt 
+- gawin ang 
+
+session 40 , july 1 2026 , 7pm - 9pm - 11:28pm
+- gui mount and pets and npc 
+- planning guis 
+
+session 39 , june 30 2026 tue , 7:33am
+- select the placing block muna , ok na , 8:14am
+- problem or not : when placing block outside of chunk's range ,that block is asigned in that chunk not in the chunk in range 
+- planning next move , ok na , 1hr planning , gui 
+
+session 38 , june 29 2026 mon ,6:06pm - 9:51pm , solid antagal ng debugging 
+- remove and place block continuation
+- ok na , na wawala na ang csg_box
+- snap na next , ok na , muntik na d magawa , nag iisnap kasi sa ibang block , pero ng i times ko sa 0.5 yung colision_normal base sa tutorial , umokay , kung walang tutorial wala talaga haha 
+- remove block , ok na 
+- add block , next nato bukas 
+- problem , can remove block but does not removed 
+	- CHECK THE NUMBER OF FACES , ok na , dumomble ang faces 
+	- how to clear the mesh ? 
+	- done : clear the mesh via diff var na may arraymesh.new() , trumiple ang faces at ang kulay nag bago white/null pero ganun parin d naremove 
+	- tried queue_free() , free() , queue_delete() , _reset_state() ,reset_state()
+	- tried checking chunk size , but its normal , not duplicating
+	- tried checking vertices , normals , colors ,pero alam ko wala dito , ang siste baka doble ang vertices , 
+	- salamat sa dyos ! hahaha , salamat sa supprt , vertices , normals , colors ang problema wala sa mesh na matagal kong tinest , sheeeet ! hahha tapos na bukas naman , tulog na ako, may pasok pa ako bukas 
+	
+	
+session 37 , june 27 2026 sat , 9:07pm putol putol 11:47pm 
+- create a silohete 
+- nagawa ko na yung pag move ng box sa collision point , yehey ! gumagana , ako may gawa 
+
+session 36 , june 26 2026 friday , 11:42am - 12:03am , nag castle fight , 1:30pm-7:02pm , 
+- gumawa ng raycast class at ang laman nito 
+- nahirapan ako sa Dictionary pero na ai ko at inalam ko kaya ok na 
+	Dictionary[Vector3i,Array[Color,int,String]] # bawal
+	Dictionary[Vector3i,Array] # pwede , ang array sa gdscript pwede kahit anong variable type , ex. var a = [1,"string",Color.RED] 
+	Dictionary[Vector3i,Color,int,String]
+- intent : ilagay sa chunk manager yung position ng chunk , pati size (meron na) , 
+- question (answered) : yung chunk ba nung ginawa naka local position o global , sa inspector ? global position kasi kung local position dapat naka zero position at yung chunk disorianted 
+- question () : nung nagawa na yung mesh yung be a chunk ba o yung data ? ang nag position sakanya ? sa inspector global position yun nakalagay dun / ang nag position from chunk_manager generate_all_chunk() function nya , hindi data o be_a_chunk()
+- fact : yung noise mismo ang pinasa hindi chunk_data , sa be_a_chunk() 
+- fact : kung global position ang nakalagay dun at may variable ibig sabihin minove sya hindi nasa isang place lang , tama ba ? , tinesting ko gumalaw sya nung ginalaw ang position means minuve sya ang local pos nya zero , thats a fact based of testing
+- fact : generate_all_chunk() ng chunk_manager ang nag move ng chunk 
+- fact : wala sa ready yung pag gawa ng chunk , 
+
+	
+session 35 , june 25 2026 thurs , 7:52 - 8:23pm
+- remove add block ,
+- antok na ako laro muna ako or tulog na hehe
+
+session 34 , june 24 2026 wed , 7:15pm - 10pm
+- d na muna mag add remove block kasi hindi sya ang sunod sa tutorial kundi greedy meshing , kaya greedy meshing ang gagawin ko ngayun 
+- shiit ! mahirap greedy meshing parang wag na muna kasi ang goal make this game exist first ,
+- plan : in optimization phase , watch the video "262k times faster than minecraft",  ang chunk ay isang object , looking for player position to cull unseen face , if the player is far from a chunk it will be greedy meshing  , at first chunk gen is in hidden face for fast creation , if player is near and the chunk will do fast (hidden face techq) then later greddy meshing if player ios far away , optimize the vertices pa sanib ang vertices at ayusin ang normals    ,if greedy meshing use c# ,
+- remove block nalang gawin pag d magets sa current tutorial , gawin yung sa long  
+- nanood ako ng tutorial , kaya walang na code kahit isa 
+
+session 33, june 23 2026 tue , 8:20am - 9am
+- solve the problem , debug 
+- ok n sa wakas salamat sa dyos 
+- problem : kasi parang hindi 32 ang default size ng chunk tapos hati pa 
+- next : remove add block  
+
+
+session 32 , june 22 2026 mon , 4:39pm - 9:47pm
+- continue chunk threading 
+- problem : flat lang yung mesh simula nung inimplement ko yung threading , nangyari din yung flat nooong chunking pero na solve ko 
+- do : remove threading and test the code to be noisy not flat , analize the code understand it to make the code debugable
+
+
+session 31 , june 21 2026 sun , 4:26pm - 
+- sa tutorial meron pa : greedy meshing (3) , shader in greedy meshing (4) , remove add block (2), chunk threading (1) , 
+- sort it to do it one by one , yung number na nakikita mo sa taas , sort yan ng mga gagaawin 
+- multi mesh node: 
+	- multi mesh (probably kasama sa chunk)this node reduces drawcalls ,need ko sya para sa so vast look imbes na one node per chunk magiging one node for all chunk ,  
+	- na aral ko na , di pwede , kasi isang mesh lang to , d pwede iba iba , at isahan lang d pwede i LOD , 
+	- pwede sya sa puno at grass ? yes pwede , kaso pwede na gawin yon ng arraymesh 
+- trying to chunk threading 
+
+session 30 , june 20 2026 sat , 3:16pm - 7:02pm , nag pc kasi si gero kaya 3 na ako naka simula 
+- will try face culling 
+- check tutorial then check her list of tutorial kung meron pang dapat gawin pag wala na , gawin ang sa minecraft long tutorial 
+- problem: d lumilitaw ang mesh ng lagyan ng gawin ang culling ,
+- debug : hindi sa addface function , nest be a chunk function naman 
+- debug : ok na nalabas na , kaso front back naka invert ang square , then ng i perlin noce kona , error parin so madami ako error :
+- problem : front back  , generate using perlin  
+- debug : ok na front back , kaso sinolve ko lang , pinag baliktad ko yung culling , magkakaproblema ako later sa ganito , 
+- ok na yung : chunk generation by perlin , yung ugat ay dimension naka zero , tinanggal ko kasi ang default para magamit ang nasa inspector , kasi kahit anong bago sa inspector pag may default value yung default ang nag override imbis na yung sa inspector 
+- ok na yung problema sa culling , yung normals ang problema , baliktad ang forward at back , ito yung data : vector forward: (0.0, 0.0, -1.0) , vector back : (0.0, 0.0, 1.0) , na dapar magkabaliktad ok na sya nakita ko sa shadows at lighting position , ito nga ang tama 
+- next : check tutorial , then check her list of tutorial kung meron pang dapat gawin , pag wala na , gawin ang sa minecraft long tutorial 
+
+
+
+session 29 , june 19 2026 fri , 12:22pm - 7:10
+- copiying code 
+- na kopya kona . may problema : walang kulay , yung mesh parameter naka mesh hindi arraymesh , ok na sya 
+- plano ko : lagyan ng uv sa array then texture sa material , saloob ng albedo 
+- pero d pa tapos yung unang tutorial 
+- may uv topic si minecraft long tutorial 
+- ang ganda lupet nagawa ko na yung noise so may noise na sya , gumagana kaso wala pang cull face 
+- next , noclip player , means flying player ,ok , super tagal
+- next , then make the dimension 500 to 1000 , ok
+- shiiit ang ganda ok na madami lumulutang na ewan hahaha pwede na mag pahinga bukas naman 
+- next : face culling , check tutorial then check her list of tutorial kung meron pang dapat gawin pag wala na , gawin ang sa minecraft long tutorial 
+	
+session 28 , june 18 2026 thursday
+- yung 2 days na nakaraan ay may pasok d ako maka pc at hanggang ngayun may pasok 
+- nag proteus ako kanina kaya d agad naka godot 
+- currently gagawin ay minecraft copiying the code 
+- d naka gawa kahit isang line of code , inantok at na distract 
+
+session 27 , june 16 2026 tue , 7:47pm - 9:30pm putol putol
+- continue minecraft thingy 
+- na search ko na ways mas mabilis arraymesh tapos yung iba slow na 
+- palagay ko copy ko na yung code ng sa tutorial na array mesh with remove and add 
+- ina antokna ako kaya tigil na 
+- next task : copy the code before messing it , go copy the code and remove add then you can now edit 
+- to look for uvs in downloaded web tutorial or vid what ever 
+
+
+session 26 , june 14 2026 sun , 3:30pm - 7:51pm , putol putol kakalakad at iba pang errands 
+- tagal na d nag pc kasi busy patrabaho sa fairview 
+- try to program na yung short nasakin na ang code na kailangan
+- yes! salamat sa dyos , dami problema , pero gumana , parang mas mabilis sya 
+- na test ko super bilis nga , instant , gamit ang method na .add_surface_from_arrays() VS .add_triangle_fan()
+- ito na siguro pero next task , analize the other if they use fan or arrays , or other techniques
+- bilis ang goal ! hanapin ang pinaka mabilis na minecraft code 
+
+
+sesion 25 , june 10 2026 wed , 5:47pm - 6:28 , dumating na si daddy nasa fairview kasi ako wala pang 1 hr hehe sorry dreams 
+- will do other code minecraft to test which is the fastest code design 
+- discontinue the short minecraft tutorial because yung code wala sa video , dapat i stream at copy the code  
+- will do the other one long 
+
+session 24 , june 9 2026 tue ,4pm - 7:00pm , 3hrs ito lang no distraction
+- continue chunk script 
+- d pala kasama ang block class sa unang tutorial , kaya safe na di gamitin
+-ok na , ang result parehas 30 sec parehas sila ng bilis 
+- same lang talaga , 30 , minsan 31 sa c# (baka butal lang ng sec), minsan 34 pag ginagalaw ko ang pc bumabagal ng 4 sec 
+- next na gagawin , yung ibang code naman , test mo kung anong code ang mabilis , dalawa yun , yung short at long , sa chunk na 8,16,8
+
+session 23 , june 5 2026 fri , 4:52pm - 6
+- try to use gdscript , and timeran 
+- second part of tutorial 
+- mabagal ang loading and saving dahil sa chunk.tscn
+- - - 
+- na trap sa coding ng line nato sa chunk_gd.gd , kasi kino konvert ko sa gdscript ang c# code sa tutorial 
+- code :  private Block[,,] _blocks = new Block[dimensions.X,dimensions.Y,dimensions.Z];
+
+
+session 22 , june 4 2026 thu , 5:50pm - 8:04pm
+- doing block scene its script kahapon 
+- ngayun chunk script naman 
+- natapos ko na part 1 ng tutorial , ang bagal pala , need ko ng profiler ,  
+
+session 21 , june 3 2026 wed , 8:39pm - 9:30pm
+- do the minecraft clone in c#    
+
+session 20 , may 29 2026 fri , 4:36pm
+- nag multiplayer analizing and arcos note done some , kaya ngayun lang 4 : 30 naka program nito , nag simula ako 1 palang 
+- polished monster gui
+ 
+
+session 19 , may 21 2026 thu , 7:19 - 
+- plans to gui all category , all posible param to add , finished 
+to be done nalang 
+
+session 18 , may 20 2026 wed, 8:02pm - 9:45pm ,
+- - - intent - - -
+- monster gui continuation
+- searching ygo monster type list 
+- tapos na ang monster list   
+- next : status effects 
+- status effect contents : icon , name , vfx , vfx view , animation , removal condition - duration - , effects code , restriction 
+- ok na , tapos na status effects , madali lang onti lang ginawa 
+
+session 17 , 3:51pm - 5:39pm
+- - - intent - - -
+- monster , behavior w3 , param ragna at rpgmv
+- w3 behavioral skill , move , patrol/follow , hold position , attack , stop
+- screen shoted na ang monster na galing sa ratemyserver 
+- rpg mv , drop items , exp , gold , action paterns skills condition rate , stats - atk matk hp mp def mdef agi luck name
+- finished analizing , parameters nalang i add ok na 
+
+session 16 , 2:53pm - 5:37pm 
+- kaka push kolang sa godette kanina ng 1:30 1hr pala ang pag push hahaha
+- - - intent - - -
+- finish the armors ,
+- - - done - - - 
+- analize the atk type and armor type 
+- added atk type to weapon type
+- finished adding parameters , next gui is monster
+
+session 15 , 7 - 9:22pm
 - nag dl ng bagong godot , malupet , iba na ang look , d na dark look , naging black sya at yung font , flat payat 
+- nag push na using git para safe nato , in version 4.6.2 godot , signal tutorial at ito
+- tinest ang dalawang downloaded na multiplayer template , 9:22 na bukas naman ulit , baka unity naman ang i backup ko   
 
 session 14 , may 10 2026 sun , 4 - 
 - adding model viewer to weapon gui 

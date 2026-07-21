@@ -1,0 +1,644 @@
+[gd_scene format=3 uid="uid://clxj7s7j1cg0t"]
+
+[sub_resource type="Gradient" id="Gradient_41758"]
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_a08wl"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_rkryv"]
+width = 20
+height = 20
+noise = SubResource("FastNoiseLite_a08wl")
+color_ramp = SubResource("Gradient_41758")
+
+[sub_resource type="Gradient" id="Gradient_rkryv"]
+colors = PackedColorArray(0, 0, 0, 1, 1, 0, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_0fn65"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_w4lcj"]
+width = 20
+height = 20
+noise = SubResource("FastNoiseLite_0fn65")
+color_ramp = SubResource("Gradient_rkryv")
+
+[sub_resource type="Gradient" id="Gradient_euwo2"]
+colors = PackedColorArray(0, 0, 0, 1, 1, 0, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_w4lcj"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ichl1"]
+width = 20
+height = 20
+noise = SubResource("FastNoiseLite_w4lcj")
+color_ramp = SubResource("Gradient_euwo2")
+
+[sub_resource type="Gradient" id="Gradient_6ig0x"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_rta0d"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_0fn65"]
+width = 20
+height = 20
+noise = SubResource("FastNoiseLite_rta0d")
+color_ramp = SubResource("Gradient_6ig0x")
+
+[sub_resource type="Gradient" id="Gradient_ichl1"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_5gc18"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_euwo2"]
+width = 20
+height = 20
+noise = SubResource("FastNoiseLite_5gc18")
+color_ramp = SubResource("Gradient_ichl1")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ynsyh"]
+font_size = 30
+
+[node name="weapon_panel_1" type="Control" unique_id=1600731298]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="." unique_id=806488842]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=963540380]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer" unique_id=2000773703]
+layout_mode = 2
+text = "Parameters :  "
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=711788570]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer2" unique_id=977709896]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer2/Panel" unique_id=1932178317]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer2/Panel/VBoxContainer" unique_id=2078341776]
+layout_mode = 2
+text = "type : "
+
+[node name="OptionButton" type="OptionButton" parent="Panel/VBoxContainer/HBoxContainer2/Panel/VBoxContainer" unique_id=2056821760]
+layout_mode = 2
+selected = 0
+item_count = 11
+popup/item_0/text = "Sword"
+popup/item_0/id = 0
+popup/item_1/text = "Spear"
+popup/item_1/id = 1
+popup/item_2/text = "Axe"
+popup/item_2/id = 2
+popup/item_3/text = "Rapier"
+popup/item_3/id = 5
+popup/item_4/text = "Dagger"
+popup/item_4/id = 4
+popup/item_5/text = "Hammer"
+popup/item_5/id = 6
+popup/item_6/text = "Staff"
+popup/item_6/id = 7
+popup/item_7/text = "Bow"
+popup/item_7/id = 8
+popup/item_8/text = "Artifact"
+popup/item_8/id = 10
+popup/item_9/text = "Other"
+popup/item_9/id = 9
+popup/item_10/text = "Add one "
+popup/item_10/id = 3
+
+[node name="Panel2" type="Panel" parent="Panel/VBoxContainer/HBoxContainer2" unique_id=710851322]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer2/Panel2" unique_id=461463547]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer2/Panel2/VBoxContainer" unique_id=1988542303]
+layout_mode = 2
+text = "ATK type : "
+
+[node name="OptionButton" type="OptionButton" parent="Panel/VBoxContainer/HBoxContainer2/Panel2/VBoxContainer" unique_id=473765136]
+layout_mode = 2
+flat = true
+item_count = 6
+popup/item_0/text = "normal"
+popup/item_0/id = 0
+popup/item_1/text = "pierce"
+popup/item_1/id = 1
+popup/item_2/text = "magic"
+popup/item_2/id = 2
+popup/item_3/text = "chaos"
+popup/item_3/id = 3
+popup/item_4/text = "siege"
+popup/item_4/id = 4
+popup/item_5/text = "hero"
+popup/item_5/id = 5
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=321417954]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="Panel4" type="Panel" parent="Panel/VBoxContainer/HBoxContainer4" unique_id=895525975]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer4/Panel4" unique_id=1693108380]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer4/Panel4/VBoxContainer" unique_id=1410653988]
+layout_mode = 2
+tooltip_text = "condition to use , like actor especific ,or class especific "
+mouse_filter = 0
+text = "condition :"
+
+[node name="Panel2" type="Panel" parent="Panel/VBoxContainer/HBoxContainer4" unique_id=595034485]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer4/Panel2" unique_id=576624908]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer4/Panel2/VBoxContainer" unique_id=1577627347]
+layout_mode = 2
+text = "Prize : "
+
+[node name="LineEdit" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer4/Panel2/VBoxContainer" unique_id=217266267]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "0"
+
+[node name="Panel3" type="Panel" parent="Panel/VBoxContainer/HBoxContainer4" unique_id=1844993023]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer4/Panel3" unique_id=1549735735]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer4/Panel3/VBoxContainer" unique_id=136487799]
+layout_mode = 2
+tooltip_text = "Selling prize in percent "
+text = "Sell (%)  : "
+
+[node name="LineEdit" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer4/Panel3/VBoxContainer" unique_id=1586155464]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "80"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=553602350]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="Panel2" type="Panel" parent="Panel/VBoxContainer/HBoxContainer5" unique_id=1765355728]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer5/Panel2" unique_id=793417233]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer5/Panel2/VBoxContainer" unique_id=254459200]
+layout_mode = 2
+text = "Atk :"
+
+[node name="LineEdit" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer5/Panel2/VBoxContainer" unique_id=1383480290]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "0"
+
+[node name="Panel5" type="Panel" parent="Panel/VBoxContainer/HBoxContainer5" unique_id=1685071972]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer5/Panel5" unique_id=1748278952]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer5/Panel5/VBoxContainer" unique_id=239985032]
+layout_mode = 2
+text = "Atk Spd (%) : "
+
+[node name="LineEdit" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer5/Panel5/VBoxContainer" unique_id=1274315321]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "0"
+
+[node name="Panel3" type="Panel" parent="Panel/VBoxContainer/HBoxContainer5" unique_id=1583460068]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer5/Panel3" unique_id=498449747]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer5/Panel3/VBoxContainer" unique_id=719525939]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+text = "Handling (%)  : "
+
+[node name="LineEdit" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer5/Panel3/VBoxContainer" unique_id=361143266]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=1844041771]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer" unique_id=622016198]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel4" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=471443995]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer/Panel4" unique_id=209522123]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer/Panel4/VBoxContainer" unique_id=1464973238]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "Crit Type  : "
+
+[node name="LineEdit" type="OptionButton" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer/Panel4/VBoxContainer" unique_id=1175428678]
+layout_mode = 2
+size_flags_vertical = 3
+selected = 0
+item_count = 15
+popup/item_0/text = "normal"
+popup/item_0/id = 0
+popup/item_1/text = "piercing"
+popup/item_1/id = 1
+popup/item_2/text = "crushing"
+popup/item_2/id = 2
+popup/item_3/text = "bleeding"
+popup/item_3/id = 3
+popup/item_4/text = "lifesteal"
+popup/item_4/id = 4
+popup/item_5/text = "Super Crit"
+popup/item_5/id = 5
+popup/item_6/text = "knockback"
+popup/item_6/id = 6
+popup/item_7/text = "mana burn"
+popup/item_7/id = 7
+popup/item_8/text = "stun"
+popup/item_8/id = 8
+popup/item_9/text = "pulvurize"
+popup/item_9/id = 9
+popup/item_10/text = "banda"
+popup/item_10/id = 10
+popup/item_11/text = "slow "
+popup/item_11/id = 11
+popup/item_12/text = "lightning"
+popup/item_12/id = 13
+popup/item_13/text = "activate skill"
+popup/item_13/id = 12
+popup/item_14/text = "add one ( code )"
+popup/item_14/id = 14
+
+[node name="Panel3" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1505373278]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer/Panel3" unique_id=502220778]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer/Panel3/VBoxContainer" unique_id=1608056916]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "Crit (%)  : "
+
+[node name="LineEdit" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer/Panel3/VBoxContainer" unique_id=10656762]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel5" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=800477020]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer/Panel5" unique_id=1836757498]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer/Panel5/VBoxContainer" unique_id=1499799871]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "element type : "
+
+[node name="LineEdit" type="OptionButton" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer/Panel5/VBoxContainer" unique_id=1492867650]
+layout_mode = 2
+size_flags_vertical = 3
+item_count = 2
+popup/item_0/text = "list of element here "
+popup/item_0/id = 0
+popup/item_1/text = "add one "
+popup/item_1/id = 1
+
+[node name="Panel6" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=917410336]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer/Panel6" unique_id=1155797852]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer/Panel6/VBoxContainer" unique_id=1015479587]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "Handling (%)  : "
+
+[node name="LineEdit" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer/Panel6/VBoxContainer" unique_id=414841910]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel7" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1523643505]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer/Panel7" unique_id=1091988000]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer/Panel7/VBoxContainer" unique_id=2095735579]
+layout_mode = 2
+text = "animation VFX :"
+
+[node name="OptionButton" type="OptionButton" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer/Panel7/VBoxContainer" unique_id=2022778196]
+layout_mode = 2
+item_count = 6
+popup/item_0/text = "0% , no crit "
+popup/item_0/id = 0
+popup/item_1/text = "30 %"
+popup/item_1/id = 1
+popup/item_2/text = "20%"
+popup/item_2/id = 2
+popup/item_3/text = "based on users stats"
+popup/item_3/id = 3
+popup/item_4/text = "physical"
+popup/item_4/id = 4
+popup/item_5/text = "special"
+popup/item_5/id = 5
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer" unique_id=103565652]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel7" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=669167830]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel7" unique_id=1592682680]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel7/VBoxContainer" unique_id=1363722319]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "weapon weakness : "
+
+[node name="LineEdit" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel7/VBoxContainer" unique_id=1532821545]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "checklist menu , weapon type list"
+
+[node name="Panel8" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1036371978]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel8" unique_id=439620996]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel8/VBoxContainer" unique_id=655800010]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "durability : "
+
+[node name="LineEdit" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel8/VBoxContainer" unique_id=1417662774]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel9" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1626060399]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel9" unique_id=697384734]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel9/VBoxContainer" unique_id=231940095]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "range : "
+
+[node name="LineEdit" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel9/VBoxContainer" unique_id=1668371649]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "100 is melee "
+
+[node name="Panel10" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=156606404]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel10" unique_id=1613689275]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel10/VBoxContainer" unique_id=1457524450]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "Tier : "
+
+[node name="OptionButton" type="OptionButton" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel10/VBoxContainer" unique_id=1503595918]
+layout_mode = 2
+item_count = 5
+popup/item_0/text = "S - max"
+popup/item_0/icon = SubResource("NoiseTexture2D_rkryv")
+popup/item_0/id = 4
+popup/item_1/text = "A - elite"
+popup/item_1/icon = SubResource("NoiseTexture2D_w4lcj")
+popup/item_1/id = 3
+popup/item_2/text = "B - epic"
+popup/item_2/icon = SubResource("NoiseTexture2D_ichl1")
+popup/item_2/id = 2
+popup/item_3/text = "C - rare"
+popup/item_3/icon = SubResource("NoiseTexture2D_0fn65")
+popup/item_3/id = 1
+popup/item_4/text = "D - normal"
+popup/item_4/icon = SubResource("NoiseTexture2D_euwo2")
+popup/item_4/id = 0
+
+[node name="Panel6" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=609316503]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel6" unique_id=1041943771]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel6/VBoxContainer" unique_id=1407706852]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "Stats (object)  : "
+
+[node name="LineEdit" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel6/VBoxContainer" unique_id=1206066239]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="." unique_id=1437686625]
+layout_mode = 0
+offset_left = 998.0
+offset_top = -209.0
+offset_right = 1664.0
+offset_bottom = -53.0
+text = "crit type , crit chance , damage element , handling (hit pecent) , weapon weakness , tier sabcd , range ,  durability "
+label_settings = SubResource("LabelSettings_ynsyh")
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="." unique_id=1395044814]
+layout_mode = 0
+offset_left = 1209.0
+offset_top = 401.0
+offset_right = 1875.0
+offset_bottom = 623.0
+text = "S - max , gold
+A - elite , violet
+B - epic , red
+C - rare , blue
+D - normal , white"
+label_settings = SubResource("LabelSettings_ynsyh")
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=158983269]
+layout_mode = 0
+offset_left = 1170.0
+offset_top = 95.0
+offset_right = 1444.0
+offset_bottom = 727.0
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1211056852]
+layout_mode = 2
+text = "to be added"

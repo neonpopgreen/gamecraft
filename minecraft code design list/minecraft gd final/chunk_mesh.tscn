@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c5vf8l80tw02y"]
+
+[ext_resource type="Script" uid="uid://cb34gspmaajup" path="res://minecraft code design list/minecraft gd final/mesh_chunk.gd" id="1_fmfcx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tyj1a"]
+vertex_color_use_as_albedo = true
+
+[node name="Chunk_mesh" type="MeshInstance3D" unique_id=2139427525]
+skeleton = NodePath("../..")
+script = ExtResource("1_fmfcx")
+material = SubResource("StandardMaterial3D_tyj1a")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1088695599]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1919123413]

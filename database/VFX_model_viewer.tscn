@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dqo8cbhgfwx1v"]
+
+[ext_resource type="Texture2D" uid="uid://dkqeydeecvgj8" path="res://database/images/Maximize.png" id="1_6galx"]
+
+[node name="VFX_Model_viewer" type="Panel" unique_id=1043175503]
+size_flags_vertical = 3
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=443354108]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=2111412386]
+handle_input_locally = false
+size = Vector2i(2, 2)
+render_target_update_mode = 4
+
+[node name="Label" type="Label" parent="." unique_id=1800322236]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "VFX_Model_viewer"
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1697583505]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+texture_normal = ExtResource("1_6galx")
+stretch_mode = 0

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://c2bwpbackn056"]
+
+[ext_resource type="Script" uid="uid://bl66plsea7kmx" path="res://player types/player_noclip.gd" id="1_poehk"]
+[ext_resource type="Script" uid="uid://dnr1rlrqovl8i" path="res://player types/ray_cast_3d.gd" id="2_75ygh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_75ygh"]
+transparency = 1
+albedo_color = Color(1, 0.31764707, 0.12941177, 0.41568628)
+
+[node name="Player_noclip" type="Node3D" unique_id=31901671]
+script = ExtResource("1_poehk")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=79151282]
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=468846699]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.4868722)
+target_position = Vector3(0, 0, -8)
+script = ExtResource("2_75ygh")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Camera3D/RayCast3D" unique_id=1285139601]
+transform = Transform3D(-0.03, 0, 0, 0, -0.03, 0, 0, 0, -0.03, 0, 0, 0.034499884)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Camera3D/RayCast3D" unique_id=1575113569]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.611862)
+visible = false
+material_override = SubResource("StandardMaterial3D_75ygh")
+size = Vector3(1.1, 1.1, 1.1)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Camera3D/RayCast3D" unique_id=1126247014]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.611862)
+visible = false
+material_override = SubResource("StandardMaterial3D_75ygh")
+size = Vector3(1.1, 1.1, 1.1)

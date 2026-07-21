@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cu6ov57v0jx3d"]
+
+[ext_resource type="Script" uid="uid://dewcdoktj1uit" path="res://minecraft code design list/minecraft gd final/chunk_manager.gd" id="1_xx61x"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_xx61x"]
+frequency = 0.04
+
+[node name="Chunk_manager" type="Node" unique_id=1747014116]
+script = ExtResource("1_xx61x")
+perlin_noise = SubResource("FastNoiseLite_xx61x")
+colors = Array[Color]([Color(0, 0, 0, 1), Color(0.8193964, 0.8193964, 0.8193964, 1), Color(0.9104056, 0.17997271, 0.9215068, 1), Color(1, 0, 0, 1), Color(0, 0, 1, 1), Color(0, 1, 0, 1)])

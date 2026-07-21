@@ -1,0 +1,533 @@
+[gd_scene format=3 uid="uid://d1rb3axh5fnrb"]
+
+[ext_resource type="Texture2D" uid="uid://bkgjvlo4by5pm" path="res://database/images/filter.png" id="1_owulb"]
+[ext_resource type="Texture2D" uid="uid://b3bqtfbid8nnc" path="res://database/images/Plus.png" id="2_g0r2l"]
+[ext_resource type="Texture2D" uid="uid://dd8loilompkx3" path="res://database/images/Items.png" id="3_acsym"]
+[ext_resource type="Texture2D" uid="uid://dyky822uumq33" path="res://database/images/Actor.png" id="4_mtm68"]
+[ext_resource type="Texture2D" uid="uid://b8h37hpwdyywb" path="res://database/images/Gear.png" id="5_acsym"]
+[ext_resource type="Texture2D" uid="uid://oe41pdgt5y5r" path="res://ress/rpg craft.png" id="5_dni3o"]
+[ext_resource type="Texture2D" uid="uid://dlpis16koykib" path="res://ress/simple_natural_landscape_free_pixel_art_background.png" id="5_g0r2l"]
+[ext_resource type="Texture2D" uid="uid://cdjasqaiucr02" path="res://database/images/Armors.png" id="6_rrc7x"]
+[ext_resource type="Texture2D" uid="uid://j76a70r770pr" path="res://database/images/Block.png" id="7_nhiu5"]
+[ext_resource type="Texture2D" uid="uid://bia2qmg1fboqm" path="res://icon.svg" id="8_ode6o"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gydaw"]
+font_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ciw65"]
+bg_color = Color(0, 0, 0.6, 1)
+corner_radius_top_right = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3xh6k"]
+resource_local_to_scene = true
+bg_color = Color(0.4809937, 0.46911746, 0.57812196, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_04nld"]
+resource_local_to_scene = true
+bg_color = Color(0.3981677, 0.38692048, 0.48535728, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_acsym"]
+line_spacing = 4.0
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Project_list" type="Panel" unique_id=1613102523]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=691830769]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=594827036]
+layout_mode = 2
+
+[node name="list of actors" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=411620683]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors" unique_id=1593232498]
+layout_mode = 2
+text = "PREMADE MAPS"
+label_settings = SubResource("LabelSettings_gydaw")
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/list of actors" unique_id=1668845613]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ciw65")
+text = "List"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/Label" unique_id=1590977666]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="MarginContainer/HBoxContainer/list of actors/Label/HBoxContainer" unique_id=2039779514]
+custom_minimum_size = Vector2(23, 0)
+layout_mode = 2
+alignment_horizontal = 0
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer/list of actors/Label/HBoxContainer/AspectRatioContainer" unique_id=918099680]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+tooltip_text = "filter by , sort by ."
+texture_normal = ExtResource("1_owulb")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="MarginContainer/HBoxContainer/list of actors/Label/HBoxContainer" unique_id=1155188538]
+custom_minimum_size = Vector2(23, 0)
+layout_mode = 2
+alignment_horizontal = 0
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer/list of actors/Label/HBoxContainer/AspectRatioContainer2" unique_id=1435419858]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+tooltip_text = "add from net/comunity "
+texture_normal = ExtResource("2_g0r2l")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/HBoxContainer/list of actors" unique_id=431665129]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer" unique_id=361370463]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel3" type="Panel" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer" unique_id=1027145486]
+custom_minimum_size = Vector2(0, 21.695)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3xh6k")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel3" unique_id=240083594]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel3/HBoxContainer" unique_id=1039171076]
+layout_mode = 2
+texture = ExtResource("3_acsym")
+expand_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel3/HBoxContainer" unique_id=1927133964]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+text = "001 :"
+clip_text = true
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel3/HBoxContainer" unique_id=144477584]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "town of the beginnings "
+clip_text = true
+
+[node name="Panel" type="Panel" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer" unique_id=1690140347]
+custom_minimum_size = Vector2(0, 21.695)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_04nld")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel" unique_id=768579089]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel/HBoxContainer" unique_id=264520126]
+layout_mode = 2
+texture = ExtResource("4_mtm68")
+expand_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel/HBoxContainer" unique_id=1802214976]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+text = "002 :"
+clip_text = true
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel/HBoxContainer" unique_id=289490452]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "mountains"
+clip_text = true
+
+[node name="Panel4" type="Panel" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer" unique_id=1977842764]
+custom_minimum_size = Vector2(0, 21.695)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3xh6k")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel4" unique_id=310051685]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel4/HBoxContainer" unique_id=1659147974]
+layout_mode = 2
+texture = ExtResource("2_g0r2l")
+expand_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel4/HBoxContainer" unique_id=1068352991]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+text = "003 :"
+clip_text = true
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel4/HBoxContainer" unique_id=1669836923]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "floaty mini islands "
+clip_text = true
+
+[node name="Panel2" type="Panel" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer" unique_id=1352871204]
+custom_minimum_size = Vector2(0, 21.695)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_04nld")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel2" unique_id=381140873]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel2/HBoxContainer" unique_id=1829893457]
+layout_mode = 2
+texture = ExtResource("2_g0r2l")
+expand_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel2/HBoxContainer" unique_id=814437909]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+text = "004 :"
+clip_text = true
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel2/HBoxContainer" unique_id=1645137376]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "simplex noise"
+clip_text = true
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel2/HBoxContainer" unique_id=1824008357]
+layout_mode = 2
+texture = ExtResource("5_acsym")
+expand_mode = 2
+
+[node name="Panel5" type="Panel" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer" unique_id=1631934842]
+custom_minimum_size = Vector2(0, 21.695)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3xh6k")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel5" unique_id=156029617]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel5/HBoxContainer" unique_id=446431094]
+layout_mode = 2
+texture = ExtResource("2_g0r2l")
+expand_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel5/HBoxContainer" unique_id=560525380]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+text = "005 :"
+clip_text = true
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel5/HBoxContainer" unique_id=65791942]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "height map"
+clip_text = true
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel5/HBoxContainer" unique_id=787394861]
+layout_mode = 2
+texture = ExtResource("5_acsym")
+expand_mode = 2
+
+[node name="Panel7" type="Panel" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer" unique_id=1930929526]
+custom_minimum_size = Vector2(0, 21.695)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_04nld")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel7" unique_id=1933128654]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel7/HBoxContainer" unique_id=183512679]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+text = "006 :"
+clip_text = true
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel7/HBoxContainer" unique_id=1624713162]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "player position"
+clip_text = true
+
+[node name="Panel6" type="Panel" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer" unique_id=1293247418]
+custom_minimum_size = Vector2(0, 21.695)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3xh6k")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel6" unique_id=198283251]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel6/HBoxContainer" unique_id=899730822]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+text = "007 :"
+clip_text = true
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel6/HBoxContainer" unique_id=1155526795]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "sfx"
+clip_text = true
+
+[node name="Panel8" type="Panel" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer" unique_id=1557954471]
+custom_minimum_size = Vector2(0, 21.695)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_04nld")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel8" unique_id=1805687937]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel8/HBoxContainer" unique_id=1305196000]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+text = "008 :"
+clip_text = true
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel8/HBoxContainer" unique_id=1572168462]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "title screen"
+clip_text = true
+
+[node name="Panel9" type="Panel" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer" unique_id=771098371]
+custom_minimum_size = Vector2(0, 21.695)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3xh6k")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel9" unique_id=1736686052]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel9/HBoxContainer" unique_id=1726519167]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+text = "009 :"
+clip_text = true
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel9/HBoxContainer" unique_id=2145555192]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "stat types"
+clip_text = true
+
+[node name="Panel10" type="Panel" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer" unique_id=551873726]
+custom_minimum_size = Vector2(0, 21.695)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_04nld")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel10" unique_id=1383744009]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel10/HBoxContainer" unique_id=534561507]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+text = "010 :"
+clip_text = true
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel10/HBoxContainer" unique_id=509121715]
+layout_mode = 2
+size_flags_horizontal = 3
+clip_text = true
+
+[node name="Panel11" type="Panel" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer" unique_id=932443324]
+custom_minimum_size = Vector2(0, 21.695)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3xh6k")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel11" unique_id=416167774]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel11/HBoxContainer" unique_id=992375590]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+text = "011 :"
+clip_text = true
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel11/HBoxContainer" unique_id=2012070528]
+layout_mode = 2
+size_flags_horizontal = 3
+clip_text = true
+
+[node name="Panel12" type="Panel" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer" unique_id=534207148]
+custom_minimum_size = Vector2(0, 21.695)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_04nld")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel12" unique_id=505768192]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel12/HBoxContainer" unique_id=764683311]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+text = "012 :"
+clip_text = true
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel12/HBoxContainer" unique_id=1545268185]
+layout_mode = 2
+size_flags_horizontal = 3
+clip_text = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=526599930]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel2" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1271703218]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel2" unique_id=124328534]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_g0r2l")
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel2" unique_id=236955787]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "this is camera that can be moved
+the pictures below is camera position and rotation only , not really a picture 
+when clicked the big cam will be that picture 
+
+the noise and the heightmap , has settings button to tweak it
+
+in what biome ? size of it , 
+create a border in edges , what to fill ex . cliffs , mountains  "
+label_settings = SubResource("LabelSettings_acsym")
+
+[node name="Panel3" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=731591248]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3" unique_id=1518514250]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/HBoxContainer" unique_id=1631879395]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+texture = ExtResource("6_rrc7x")
+expand_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/HBoxContainer" unique_id=822252912]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+texture = ExtResource("7_nhiu5")
+expand_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/HBoxContainer" unique_id=266157562]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+texture = ExtResource("6_rrc7x")
+expand_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/HBoxContainer" unique_id=610899050]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+texture = ExtResource("8_ode6o")
+expand_mode = 5
+
+[node name="TextureRect5" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/HBoxContainer" unique_id=848685816]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+texture = ExtResource("6_rrc7x")
+expand_mode = 5
+
+[node name="TextureRect6" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/HBoxContainer" unique_id=1045558435]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+texture = ExtResource("5_dni3o")
+expand_mode = 5
+
+[node name="TextureRect7" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/HBoxContainer" unique_id=998140968]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+texture = ExtResource("6_rrc7x")
+expand_mode = 5

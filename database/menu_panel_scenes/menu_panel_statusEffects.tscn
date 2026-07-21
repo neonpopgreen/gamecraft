@@ -1,0 +1,795 @@
+[gd_scene format=3 uid="uid://c6xdus7h6qyjp"]
+
+[ext_resource type="Texture2D" uid="uid://bkgjvlo4by5pm" path="res://database/images/filter.png" id="1_jg7iu"]
+[ext_resource type="Texture2D" uid="uid://b3bqtfbid8nnc" path="res://database/images/Plus.png" id="2_03e4t"]
+[ext_resource type="Texture2D" uid="uid://cdjasqaiucr02" path="res://database/images/Armors.png" id="3_esn80"]
+[ext_resource type="Texture2D" uid="uid://dd8loilompkx3" path="res://database/images/Items.png" id="3_p5f0o"]
+[ext_resource type="Texture2D" uid="uid://dyky822uumq33" path="res://database/images/Actor.png" id="4_8b4ba"]
+[ext_resource type="PackedScene" uid="uid://dqo8cbhgfwx1v" path="res://database/VFX_model_viewer.tscn" id="4_jg7iu"]
+[ext_resource type="PackedScene" uid="uid://bt4bjaaqv1ne1" path="res://database/PC_DB_menu_Notes_tabified.tscn" id="5_8b4ba"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jg238"]
+bg_color = Color(0.59607846, 0.5882353, 0.6901961, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_hmm5a"]
+font_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3y855"]
+bg_color = Color(0, 0, 0.6, 1)
+corner_radius_top_right = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jg7iu"]
+resource_local_to_scene = true
+bg_color = Color(0.4809937, 0.46911746, 0.57812196, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_03e4t"]
+resource_local_to_scene = true
+bg_color = Color(0.3981677, 0.38692048, 0.48535728, 1)
+
+[sub_resource type="Gradient" id="Gradient_41758"]
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_a08wl"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_msmjr"]
+width = 20
+height = 20
+noise = SubResource("FastNoiseLite_a08wl")
+color_ramp = SubResource("Gradient_41758")
+
+[sub_resource type="Gradient" id="Gradient_rkryv"]
+colors = PackedColorArray(0, 0, 0, 1, 1, 0, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_0fn65"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vbk7n"]
+width = 20
+height = 20
+noise = SubResource("FastNoiseLite_0fn65")
+color_ramp = SubResource("Gradient_rkryv")
+
+[sub_resource type="Gradient" id="Gradient_euwo2"]
+colors = PackedColorArray(0, 0, 0, 1, 1, 0, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_w4lcj"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_w1x1d"]
+width = 20
+height = 20
+noise = SubResource("FastNoiseLite_w4lcj")
+color_ramp = SubResource("Gradient_euwo2")
+
+[sub_resource type="Gradient" id="Gradient_6ig0x"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_rta0d"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_xqdo2"]
+width = 20
+height = 20
+noise = SubResource("FastNoiseLite_rta0d")
+color_ramp = SubResource("Gradient_6ig0x")
+
+[sub_resource type="Gradient" id="Gradient_ichl1"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_5gc18"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_i1nqv"]
+width = 20
+height = 20
+noise = SubResource("FastNoiseLite_5gc18")
+color_ramp = SubResource("Gradient_ichl1")
+
+[sub_resource type="LabelSettings" id="LabelSettings_msmjr"]
+font_size = 30
+
+[node name="Armors" type="Panel" unique_id=48664321]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_jg238")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=531396316]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=430259519]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="list of actors" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1849692059]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors" unique_id=752710565]
+layout_mode = 2
+text = "STATES"
+label_settings = SubResource("LabelSettings_hmm5a")
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/list of actors" unique_id=1960212544]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y855")
+text = "Skill List"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/Label" unique_id=470701388]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="MarginContainer/HBoxContainer/list of actors/Label/HBoxContainer" unique_id=1354616785]
+custom_minimum_size = Vector2(23, 0)
+layout_mode = 2
+alignment_horizontal = 0
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer/list of actors/Label/HBoxContainer/AspectRatioContainer" unique_id=1328281175]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+tooltip_text = "filter by , sort by ."
+texture_normal = ExtResource("1_jg7iu")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="MarginContainer/HBoxContainer/list of actors/Label/HBoxContainer" unique_id=1291027729]
+custom_minimum_size = Vector2(23, 0)
+layout_mode = 2
+alignment_horizontal = 0
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer/list of actors/Label/HBoxContainer/AspectRatioContainer2" unique_id=1374493047]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+tooltip_text = "add from net/comunity "
+texture_normal = ExtResource("2_03e4t")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/HBoxContainer/list of actors" unique_id=272120004]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer" unique_id=101885750]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel3" type="Panel" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer" unique_id=994703830]
+custom_minimum_size = Vector2(0, 21.695)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jg7iu")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel3" unique_id=957306898]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel3/HBoxContainer" unique_id=136834473]
+layout_mode = 2
+texture = ExtResource("3_p5f0o")
+expand_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel3/HBoxContainer" unique_id=986483638]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+text = "001 :"
+clip_text = true
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel3/HBoxContainer" unique_id=1650598050]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Knockout"
+clip_text = true
+
+[node name="Panel" type="Panel" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer" unique_id=908867633]
+custom_minimum_size = Vector2(0, 21.695)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_03e4t")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel" unique_id=1129353753]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel/HBoxContainer" unique_id=1918291523]
+layout_mode = 2
+texture = ExtResource("4_8b4ba")
+expand_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel/HBoxContainer" unique_id=1423281748]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+text = "002 :"
+clip_text = true
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel/HBoxContainer" unique_id=648015371]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Guard"
+clip_text = true
+
+[node name="Panel4" type="Panel" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer" unique_id=600488364]
+custom_minimum_size = Vector2(0, 21.695)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jg7iu")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel4" unique_id=1396143592]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel4/HBoxContainer" unique_id=909576245]
+layout_mode = 2
+texture = ExtResource("2_03e4t")
+expand_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel4/HBoxContainer" unique_id=1847569737]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+text = "003 :"
+clip_text = true
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel4/HBoxContainer" unique_id=1861150342]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Immortal"
+clip_text = true
+
+[node name="Panel2" type="Panel" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer" unique_id=1556695898]
+custom_minimum_size = Vector2(0, 21.695)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_03e4t")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel2" unique_id=1895576239]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel2/HBoxContainer" unique_id=1463713665]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+text = "004 :"
+clip_text = true
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel2/HBoxContainer" unique_id=1962034959]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Poison"
+clip_text = true
+
+[node name="Panel5" type="Panel" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer" unique_id=1302168588]
+custom_minimum_size = Vector2(0, 21.695)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jg7iu")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel5" unique_id=446797543]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel5/HBoxContainer" unique_id=1243136331]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+text = "005 :"
+clip_text = true
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel5/HBoxContainer" unique_id=340295432]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Blind"
+clip_text = true
+
+[node name="Panel7" type="Panel" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer" unique_id=150643634]
+custom_minimum_size = Vector2(0, 21.695)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_03e4t")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel7" unique_id=906833861]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel7/HBoxContainer" unique_id=293097407]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+text = "006 :"
+clip_text = true
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel7/HBoxContainer" unique_id=1703940922]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Silence"
+clip_text = true
+
+[node name="Panel6" type="Panel" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer" unique_id=1486379816]
+custom_minimum_size = Vector2(0, 21.695)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jg7iu")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel6" unique_id=984382670]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel6/HBoxContainer" unique_id=990684342]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+text = "007 :"
+clip_text = true
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel6/HBoxContainer" unique_id=660017503]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Rage"
+clip_text = true
+
+[node name="Panel8" type="Panel" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer" unique_id=1204810704]
+custom_minimum_size = Vector2(0, 21.695)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_03e4t")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel8" unique_id=2020619320]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel8/HBoxContainer" unique_id=1847966200]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+text = "008 :"
+clip_text = true
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel8/HBoxContainer" unique_id=958269371]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Confusion"
+clip_text = true
+
+[node name="Panel9" type="Panel" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer" unique_id=1372697896]
+custom_minimum_size = Vector2(0, 21.695)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jg7iu")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel9" unique_id=1312309486]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel9/HBoxContainer" unique_id=1039356185]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+text = "009 :"
+clip_text = true
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel9/HBoxContainer" unique_id=1881296126]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fascination"
+clip_text = true
+
+[node name="Panel10" type="Panel" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer" unique_id=1311514107]
+custom_minimum_size = Vector2(0, 21.695)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_03e4t")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel10" unique_id=2053313536]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel10/HBoxContainer" unique_id=1858705847]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+text = "010 :"
+clip_text = true
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel10/HBoxContainer" unique_id=704655210]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Sleep"
+clip_text = true
+
+[node name="Panel11" type="Panel" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer" unique_id=185059588]
+custom_minimum_size = Vector2(0, 21.695)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jg7iu")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel11" unique_id=1293147923]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel11/HBoxContainer" unique_id=973418900]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+text = "011 :"
+clip_text = true
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel11/HBoxContainer" unique_id=914409745]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Stun"
+clip_text = true
+
+[node name="Panel12" type="Panel" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer" unique_id=1395889592]
+custom_minimum_size = Vector2(0, 21.695)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_03e4t")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel12" unique_id=1039684560]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel12/HBoxContainer" unique_id=1404946741]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+text = "012 :"
+clip_text = true
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer/Panel12/HBoxContainer" unique_id=733396204]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Slow"
+clip_text = true
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1171206612]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3" unique_id=1683072239]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer2" unique_id=628117600]
+layout_mode = 2
+text = "icon : "
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer2" unique_id=1075764273]
+layout_mode = 2
+texture = ExtResource("3_esn80")
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer2" unique_id=935357124]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer2" unique_id=1086938324]
+layout_mode = 2
+text = "name:  "
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer2" unique_id=781281189]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3" unique_id=636999454]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.4
+placeholder_text = "Description"
+wrap_mode = 1
+autowrap_mode = 1
+
+[node name="Panel" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3" unique_id=1486785173]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.75
+
+[node name="VScrollBar" type="ScrollContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel" unique_id=1591645850]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar" unique_id=580949831]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer" unique_id=2042887127]
+layout_mode = 2
+text = "Parameters :  "
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer" unique_id=341448935]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer" unique_id=1007311370]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel4" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=773435286]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel4" unique_id=1160580610]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel4/VBoxContainer" unique_id=1161311845]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "VFX : "
+
+[node name="LineEdit" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel4/VBoxContainer" unique_id=1938004381]
+layout_mode = 2
+size_flags_vertical = 3
+item_count = 7
+popup/item_0/text = "body"
+popup/item_0/id = 0
+popup/item_1/text = "head"
+popup/item_1/id = 1
+popup/item_2/text = "hand"
+popup/item_2/id = 2
+popup/item_3/text = "leg"
+popup/item_3/id = 3
+popup/item_4/text = "accessory"
+popup/item_4/id = 4
+popup/item_5/text = "shield"
+popup/item_5/id = 5
+popup/item_6/text = "add one "
+popup/item_6/id = 6
+
+[node name="Panel8" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1292894614]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel8" unique_id=1007873261]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel8/VBoxContainer" unique_id=644994242]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "removal condition : "
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel8/VBoxContainer" unique_id=1668763149]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel9" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=95112515]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel9" unique_id=2029338277]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel9/VBoxContainer" unique_id=1035277417]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "restriction : "
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel9/VBoxContainer" unique_id=441112279]
+layout_mode = 2
+item_count = 5
+popup/item_0/text = "S - max"
+popup/item_0/icon = SubResource("NoiseTexture2D_msmjr")
+popup/item_0/id = 4
+popup/item_1/text = "A - elite"
+popup/item_1/icon = SubResource("NoiseTexture2D_vbk7n")
+popup/item_1/id = 3
+popup/item_2/text = "B - epic"
+popup/item_2/icon = SubResource("NoiseTexture2D_w1x1d")
+popup/item_2/id = 2
+popup/item_3/text = "C - rare"
+popup/item_3/icon = SubResource("NoiseTexture2D_xqdo2")
+popup/item_3/id = 1
+popup/item_4/text = "D - normal"
+popup/item_4/icon = SubResource("NoiseTexture2D_i1nqv")
+popup/item_4/id = 0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer" unique_id=1159315314]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel4" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=627486791]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel4" unique_id=1791759102]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel4/VBoxContainer" unique_id=1771564100]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "Animation : "
+
+[node name="LineEdit" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel4/VBoxContainer" unique_id=1775229412]
+layout_mode = 2
+size_flags_vertical = 3
+item_count = 7
+popup/item_0/text = "light"
+popup/item_0/id = 0
+popup/item_1/text = "medium"
+popup/item_1/id = 1
+popup/item_2/text = "heavy"
+popup/item_2/id = 2
+popup/item_3/text = "unarmored"
+popup/item_3/id = 3
+popup/item_4/text = "fortified"
+popup/item_4/id = 4
+popup/item_5/text = "divine"
+popup/item_5/id = 5
+popup/item_6/text = "add one"
+popup/item_6/id = 6
+
+[node name="Panel9" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1497125101]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel9" unique_id=1535330601]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel9/VBoxContainer" unique_id=1483289043]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "duration : "
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel9/VBoxContainer" unique_id=590500939]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel2" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3" unique_id=926780186]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel2" unique_id=1192491523]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel2/VBoxContainer" unique_id=1408777163]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "status effect code :  "
+horizontal_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel2/VBoxContainer" unique_id=250650662]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=818079926]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VFX_Model_viewer" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1043175503 instance=ExtResource("4_jg7iu")]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=64708417]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/Panel" unique_id=922916306]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "effects of item when used  :
+list of 
+(stats , 
+conditionals , 
+special unique traits
+level of skill and the improvement of stats ) 
+in tabs"
+autowrap_mode = 1
+
+[node name="PC_DB_menu_Notes_tabified" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1395757563 instance=ExtResource("5_8b4ba")]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="." unique_id=1114757463]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 713.0
+offset_top = -91.0
+offset_right = -71.0
+offset_bottom = -669.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "for VFX model viewer window : 
+add button , show vfx when activated  ,
+animation :
+intro vfx , body , deactivated vfx "
+vertical_alignment = 2
+autowrap_mode = 1
+
+[node name="Label4" type="Label" parent="." unique_id=1377464845]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 690.0
+offset_right = 669.0
+offset_bottom = 1143.0
+text = "status effect contents : icon , name , vfx , vfx view , animation , removal condition - duration - , effects code , restriction 
+"
+label_settings = SubResource("LabelSettings_msmjr")
+autowrap_mode = 2

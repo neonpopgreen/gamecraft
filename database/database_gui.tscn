@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://65n8js634m7u"]
+[gd_scene format=3 uid="uid://65n8js634m7u"]
 
 [ext_resource type="Script" uid="uid://b4jhprhgnxukj" path="res://database/database_gui_02.gd" id="1_hmm5a"]
 [ext_resource type="Texture2D" uid="uid://dcfoho4efpnwm" path="res://database/images/default_panel_image.png" id="2_hmm5a"]
-[ext_resource type="PackedScene" uid="uid://tbvm3rp0110m" path="res://database/menu_panel_characters.tscn" id="3_senrd"]
+[ext_resource type="PackedScene" uid="uid://tbvm3rp0110m" path="res://database/menu_panel_scenes/menu_panel_characters.tscn" id="3_senrd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jg238"]
 bg_color = Color(0.596131, 0.58707, 0.690401, 1)
@@ -13,7 +13,7 @@ font_size = 30
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mn7fe"]
 bg_color = Color(0.596131, 0.58707, 0.690401, 1)
 
-[node name="DatabaseGUI" type="Control"]
+[node name="DatabaseGUI" type="Control" unique_id=630685168]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,7 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hmm5a")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=1941233380]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.05
@@ -32,7 +32,7 @@ anchor_bottom = 0.9
 offset_right = -0.32
 offset_bottom = -0.176003
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=864240626]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -40,13 +40,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="menu" type="Panel" parent="Panel/HBoxContainer"]
+[node name="menu" type="Panel" parent="Panel/HBoxContainer" unique_id=1417930589]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.25
 theme_override_styles/panel = SubResource("StyleBoxFlat_jg238")
 
-[node name="MarginContainer" type="MarginContainer" parent="Panel/HBoxContainer/menu"]
+[node name="MarginContainer" type="MarginContainer" parent="Panel/HBoxContainer/menu" unique_id=172622358]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -58,10 +58,10 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 3
 theme_override_constants/margin_bottom = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer/menu/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer/menu/MarginContainer" unique_id=1932090156]
 layout_mode = 2
 
-[node name="LabelMenu" type="Label" parent="Panel/HBoxContainer/menu/MarginContainer/VBoxContainer"]
+[node name="LabelMenu" type="Label" parent="Panel/HBoxContainer/menu/MarginContainer/VBoxContainer" unique_id=960400444]
 layout_mode = 2
 text = "menu"
 label_settings = SubResource("LabelSettings_3y855")
@@ -69,31 +69,31 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="VScrollBar" type="ScrollContainer" parent="Panel/HBoxContainer/menu/MarginContainer/VBoxContainer"]
+[node name="VScrollBar" type="ScrollContainer" parent="Panel/HBoxContainer/menu/MarginContainer/VBoxContainer" unique_id=586963108]
 layout_mode = 2
 size_flags_vertical = 3
 horizontal_scroll_mode = 0
 
-[node name="GridContainer" type="GridContainer" parent="Panel/HBoxContainer/menu/MarginContainer/VBoxContainer/VScrollBar"]
+[node name="GridContainer" type="GridContainer" parent="Panel/HBoxContainer/menu/MarginContainer/VBoxContainer/VScrollBar" unique_id=1947699309]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 2
 
-[node name="TabContainer" type="TabContainer" parent="Panel/HBoxContainer"]
+[node name="TabContainer" type="TabContainer" parent="Panel/HBoxContainer" unique_id=786098205]
 layout_mode = 2
 size_flags_horizontal = 3
 current_tab = 1
 tabs_visible = false
 
-[node name="Panel2" type="Panel" parent="Panel/HBoxContainer/TabContainer"]
+[node name="Panel2" type="Panel" parent="Panel/HBoxContainer/TabContainer" unique_id=558210964]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_mn7fe")
 metadata/_tab_index = 0
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Panel/HBoxContainer/TabContainer/Panel2"]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Panel/HBoxContainer/TabContainer/Panel2" unique_id=164264809]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -102,15 +102,15 @@ grow_horizontal = 2
 grow_vertical = 2
 ratio = 1.6
 
-[node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer/TabContainer/Panel2/AspectRatioContainer"]
+[node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer/TabContainer/Panel2/AspectRatioContainer" unique_id=1355922848]
 layout_mode = 2
 texture = ExtResource("2_hmm5a")
 
-[node name="Characters" parent="Panel/HBoxContainer/TabContainer" instance=ExtResource("3_senrd")]
+[node name="Characters" parent="Panel/HBoxContainer/TabContainer" unique_id=1691338287 instance=ExtResource("3_senrd")]
 layout_mode = 2
 metadata/_tab_index = 1
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1660858500]
 layout_mode = 0
 offset_left = -153.0
 offset_top = 134.0

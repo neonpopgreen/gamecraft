@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dxp6b7k4chjyi"]
+
+[ext_resource type="PackedScene" uid="uid://cu6ov57v0jx3d" path="res://minecraft code design list/minecraft gd final/chunk_manager.tscn" id="2_fwuaf"]
+[ext_resource type="PackedScene" uid="uid://c2bwpbackn056" path="res://player types/player_noclip.tscn" id="3_tyj1a"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fwuaf"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_tyj1a"]
+sky_material = SubResource("ProceduralSkyMaterial_fwuaf")
+
+[sub_resource type="Environment" id="Environment_dug0v"]
+background_mode = 2
+sky = SubResource("Sky_tyj1a")
+tonemap_mode = 2
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fwuaf"]
+data = PackedVector3Array(-0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_fwuaf"]
+seed = 1
+
+[node name="MeshChunk" type="Node3D" unique_id=1367829884]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=226048376]
+transform = Transform3D(0.9229148, -0.30727166, 0.2319749, 0, 0.60252565, 0.7980995, -0.3850042, -0.73657787, 0.55607986, 0, 4.149859, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=864278934]
+environment = SubResource("Environment_dug0v")
+
+[node name="Player_noclip" parent="." unique_id=31901671 instance=ExtResource("3_tyj1a")]
+transform = Transform3D(-0.79186344, 0, -0.6106982, 0, 1, 0, 0.6106982, 0, -0.79186344, 0, 0, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1267678607]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2908154, 0, 2.403607)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="CSGBox3D" unique_id=324656308]
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="CSGBox3D/StaticBody3D" unique_id=1244968569]
+shape = SubResource("ConcavePolygonShape3D_fwuaf")
+
+[node name="Chunk_manager" parent="." unique_id=1747014116 instance=ExtResource("2_fwuaf")]
+noise_seed = 1
+frequency = 0.01
+perlin_noise = SubResource("FastNoiseLite_fwuaf")
+colors = Array[Color]([Color(0, 0, 0, 1), Color(0.9104056, 0.17997271, 0.9215068, 1), Color(1, 0, 0, 1), Color(0, 0, 1, 1), Color(0, 1, 0, 1)])

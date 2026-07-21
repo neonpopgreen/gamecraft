@@ -1,0 +1,917 @@
+[gd_scene format=3 uid="uid://835cxayhvdxh"]
+
+[ext_resource type="Texture2D" uid="uid://bkgjvlo4by5pm" path="res://database/images/filter.png" id="1_msmjr"]
+[ext_resource type="Texture2D" uid="uid://b3bqtfbid8nnc" path="res://database/images/Plus.png" id="2_vbk7n"]
+[ext_resource type="Texture2D" uid="uid://cdjasqaiucr02" path="res://database/images/Armors.png" id="3_msmjr"]
+[ext_resource type="PackedScene" uid="uid://ejxn6p82071i" path="res://database/model_viewer.tscn" id="4_msmjr"]
+[ext_resource type="PackedScene" uid="uid://bt4bjaaqv1ne1" path="res://database/PC_DB_menu_Notes_tabified.tscn" id="5_i1nqv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jg238"]
+bg_color = Color(0.596131, 0.58707, 0.690401, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_hmm5a"]
+font_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3y855"]
+bg_color = Color(0, 0, 0.6, 1)
+corner_radius_top_right = 100
+
+[sub_resource type="Gradient" id="Gradient_41758"]
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_a08wl"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_msmjr"]
+width = 20
+height = 20
+noise = SubResource("FastNoiseLite_a08wl")
+color_ramp = SubResource("Gradient_41758")
+
+[sub_resource type="Gradient" id="Gradient_rkryv"]
+colors = PackedColorArray(0, 0, 0, 1, 1, 0, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_0fn65"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vbk7n"]
+width = 20
+height = 20
+noise = SubResource("FastNoiseLite_0fn65")
+color_ramp = SubResource("Gradient_rkryv")
+
+[sub_resource type="Gradient" id="Gradient_euwo2"]
+colors = PackedColorArray(0, 0, 0, 1, 1, 0, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_w4lcj"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_w1x1d"]
+width = 20
+height = 20
+noise = SubResource("FastNoiseLite_w4lcj")
+color_ramp = SubResource("Gradient_euwo2")
+
+[sub_resource type="Gradient" id="Gradient_6ig0x"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_rta0d"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_xqdo2"]
+width = 20
+height = 20
+noise = SubResource("FastNoiseLite_rta0d")
+color_ramp = SubResource("Gradient_6ig0x")
+
+[sub_resource type="Gradient" id="Gradient_ichl1"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_5gc18"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_i1nqv"]
+width = 20
+height = 20
+noise = SubResource("FastNoiseLite_5gc18")
+color_ramp = SubResource("Gradient_ichl1")
+
+[sub_resource type="LabelSettings" id="LabelSettings_msmjr"]
+font_size = 30
+
+[node name="Armors" type="Panel" unique_id=48664321]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_jg238")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=531396316]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=430259519]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="list of actors" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1849692059]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors" unique_id=752710565]
+layout_mode = 2
+text = "ARMORS"
+label_settings = SubResource("LabelSettings_hmm5a")
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/list of actors" unique_id=1960212544]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y855")
+text = "Skill List"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/Label" unique_id=470701388]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="MarginContainer/HBoxContainer/list of actors/Label/HBoxContainer" unique_id=1354616785]
+custom_minimum_size = Vector2(23, 0)
+layout_mode = 2
+alignment_horizontal = 0
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer/list of actors/Label/HBoxContainer/AspectRatioContainer" unique_id=1328281175]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+tooltip_text = "filter by , sort by ."
+texture_normal = ExtResource("1_msmjr")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="MarginContainer/HBoxContainer/list of actors/Label/HBoxContainer" unique_id=1291027729]
+custom_minimum_size = Vector2(23, 0)
+layout_mode = 2
+alignment_horizontal = 0
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer/list of actors/Label/HBoxContainer/AspectRatioContainer2" unique_id=1374493047]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+tooltip_text = "add from net/comunity "
+texture_normal = ExtResource("2_vbk7n")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/HBoxContainer/list of actors" unique_id=272120004]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer" unique_id=101885750]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer" unique_id=303689519]
+layout_mode = 2
+text = "sample item , sample item , sample item"
+clip_text = true
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer/VBoxContainer" unique_id=938410354]
+layout_mode = 2
+text = "Excalibur"
+clip_text = true
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1171206612]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3" unique_id=1683072239]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer2" unique_id=628117600]
+layout_mode = 2
+text = "icon : "
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer2" unique_id=1075764273]
+layout_mode = 2
+texture = ExtResource("3_msmjr")
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer2" unique_id=935357124]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer2" unique_id=1086938324]
+layout_mode = 2
+text = "name:  "
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer2" unique_id=781281189]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3" unique_id=636999454]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+placeholder_text = "Description"
+wrap_mode = 1
+autowrap_mode = 1
+
+[node name="Panel" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3" unique_id=1486785173]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VScrollBar" type="ScrollContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel" unique_id=1591645850]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar" unique_id=580949831]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer" unique_id=2042887127]
+layout_mode = 2
+text = "Parameters :  "
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer" unique_id=341448935]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer" unique_id=1007311370]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel4" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=773435286]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel4" unique_id=1160580610]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel4/VBoxContainer" unique_id=1161311845]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "Genre : "
+
+[node name="LineEdit" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel4/VBoxContainer" unique_id=1938004381]
+layout_mode = 2
+size_flags_vertical = 3
+item_count = 7
+popup/item_0/text = "body"
+popup/item_0/id = 0
+popup/item_1/text = "head"
+popup/item_1/id = 1
+popup/item_2/text = "hand"
+popup/item_2/id = 2
+popup/item_3/text = "leg"
+popup/item_3/id = 3
+popup/item_4/text = "accessory"
+popup/item_4/id = 4
+popup/item_5/text = "shield"
+popup/item_5/id = 5
+popup/item_6/text = "add one "
+popup/item_6/id = 6
+
+[node name="Panel8" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1292894614]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel8" unique_id=1007873261]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel8/VBoxContainer" unique_id=644994242]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "price : "
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel8/VBoxContainer" unique_id=1668763149]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel9" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=95112515]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel9" unique_id=2029338277]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel9/VBoxContainer" unique_id=1035277417]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "Tier : "
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel9/VBoxContainer" unique_id=441112279]
+layout_mode = 2
+item_count = 5
+popup/item_0/text = "S - max"
+popup/item_0/icon = SubResource("NoiseTexture2D_msmjr")
+popup/item_0/id = 4
+popup/item_1/text = "A - elite"
+popup/item_1/icon = SubResource("NoiseTexture2D_vbk7n")
+popup/item_1/id = 3
+popup/item_2/text = "B - epic"
+popup/item_2/icon = SubResource("NoiseTexture2D_w1x1d")
+popup/item_2/id = 2
+popup/item_3/text = "C - rare"
+popup/item_3/icon = SubResource("NoiseTexture2D_xqdo2")
+popup/item_3/id = 1
+popup/item_4/text = "D - normal"
+popup/item_4/icon = SubResource("NoiseTexture2D_i1nqv")
+popup/item_4/id = 0
+
+[node name="Panel10" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=504636098]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel10" unique_id=1005670368]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel10/VBoxContainer" unique_id=1084060821]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "defence : "
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel10/VBoxContainer" unique_id=837967709]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel11" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1281503953]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel11" unique_id=491994828]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel11/VBoxContainer" unique_id=460808042]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "max hp : "
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel11/VBoxContainer" unique_id=47705698]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel12" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=772831602]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel12" unique_id=2014303595]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel12/VBoxContainer" unique_id=974952885]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "regen hp : "
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel12/VBoxContainer" unique_id=1158908279]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel13" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=643339599]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel13" unique_id=1545085166]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel13/VBoxContainer" unique_id=1700863029]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "debuff resist (%) : "
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel13/VBoxContainer" unique_id=136132782]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel14" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1693781367]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel14" unique_id=1147654913]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel14/VBoxContainer" unique_id=540472183]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "atk : "
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel14/VBoxContainer" unique_id=563754877]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel15" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=553729774]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel15" unique_id=224537106]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel15/VBoxContainer" unique_id=1337378106]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "durability : "
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel15/VBoxContainer" unique_id=306071701]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel16" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1442822695]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel16" unique_id=488211686]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel16/VBoxContainer" unique_id=1882898101]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "element : "
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel16/VBoxContainer" unique_id=1302440784]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel17" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1864355129]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel17" unique_id=1519083868]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel17/VBoxContainer" unique_id=759731192]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "magic : "
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel17/VBoxContainer" unique_id=399745177]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer" unique_id=1159315314]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel4" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=627486791]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel4" unique_id=1791759102]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel4/VBoxContainer" unique_id=1771564100]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "Type : "
+
+[node name="LineEdit" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel4/VBoxContainer" unique_id=1775229412]
+layout_mode = 2
+size_flags_vertical = 3
+item_count = 7
+popup/item_0/text = "light"
+popup/item_0/id = 0
+popup/item_1/text = "medium"
+popup/item_1/id = 1
+popup/item_2/text = "heavy"
+popup/item_2/id = 2
+popup/item_3/text = "unarmored"
+popup/item_3/id = 3
+popup/item_4/text = "fortified"
+popup/item_4/id = 4
+popup/item_5/text = "divine"
+popup/item_5/id = 5
+popup/item_6/text = "add one"
+popup/item_6/id = 6
+
+[node name="Panel9" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1497125101]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel9" unique_id=1535330601]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel9/VBoxContainer" unique_id=1483289043]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "selling price : "
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel9/VBoxContainer" unique_id=590500939]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel8" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=74502716]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel8" unique_id=258117582]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel8/VBoxContainer" unique_id=1707888105]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "condition : "
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel8/VBoxContainer" unique_id=1601934018]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel10" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1926403653]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel10" unique_id=850872919]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel10/VBoxContainer" unique_id=222849631]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "magic def : "
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel10/VBoxContainer" unique_id=619911488]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel11" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=2126915846]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel11" unique_id=873221546]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel11/VBoxContainer" unique_id=1440900431]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "max mp : "
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel11/VBoxContainer" unique_id=133128998]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel12" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=86172813]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel12" unique_id=1548479794]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel12/VBoxContainer" unique_id=1858698629]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "regen mp : "
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel12/VBoxContainer" unique_id=640513236]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel13" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1196440645]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel13" unique_id=1459900691]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel13/VBoxContainer" unique_id=680270285]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "duration resist (%) : "
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel13/VBoxContainer" unique_id=1894410023]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel14" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=862869080]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel14" unique_id=200561742]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel14/VBoxContainer" unique_id=259041827]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "handling , hit (%) : "
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel14/VBoxContainer" unique_id=557057987]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel7" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1228262852]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel7" unique_id=1877199397]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel7/VBoxContainer" unique_id=2048148927]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "weapon weakness : "
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel7/VBoxContainer" unique_id=1910965155]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "checklist menu , weapon type list"
+
+[node name="Panel16" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1239425250]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel16" unique_id=388890618]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel16/VBoxContainer" unique_id=269753668]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "crit res : "
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer2/Panel16/VBoxContainer" unique_id=1501563661]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=818079926]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Model_viewer" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=784883302 instance=ExtResource("4_msmjr")]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=64708417]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/Panel" unique_id=922916306]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "effects of item when used  :
+list of 
+(stats , 
+conditionals , 
+special unique traits
+level of skill and the improvement of stats ) 
+in tabs"
+autowrap_mode = 1
+
+[node name="PC_DB_menu_Notes_tabified" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1395757563 instance=ExtResource("5_i1nqv")]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1415645849]
+layout_mode = 0
+offset_left = 1195.0
+offset_top = -247.0
+offset_right = 1880.0
+offset_bottom = 385.0
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1296263020]
+layout_mode = 2
+text = "to be added :
+defence
+magic resist
+agi , luck 
+max hp , mp
+debuff resist 
+defence duraation resist
+regen hp mp 
+body part : head body  hand leg accesory shield
+genre : light , heavy list of warcraft 3 armors
+price , selling price
+atk , handling hit 
+crit resist 
+weapon weakness checklist , by default its like warcraft , but can be edited 
+durability
+element
+evation
+tier
+condition to equip
+mag or atats object"
+label_settings = SubResource("LabelSettings_msmjr")
+
+[node name="Panel8" type="Panel" parent="VBoxContainer" unique_id=1956638532]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Panel8" unique_id=1913705198]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel8/VBoxContainer" unique_id=444536551]
+layout_mode = 2
+tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
+mouse_filter = 0
+text = "durability : "
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/Panel8/VBoxContainer" unique_id=196085661]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="." unique_id=1114757463]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 713.0
+offset_top = -91.0
+offset_right = -71.0
+offset_bottom = -669.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "for model viewer window : 
+add button , show weapon when equiped ,
+will show the weapon with a holder character "
+vertical_alignment = 2
+autowrap_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=589163404]
+layout_mode = 0
+offset_left = 734.0
+offset_top = 673.0
+offset_right = 1820.0
+offset_bottom = 1525.0
+text = "order of parameters : 
+type , type  , dropdown
+sell , selling price , lineedit
+tier , condition to equip , dropdown , code conditional  
+def ,mag def , lineedit
+max hp mp , lineedit
+regen hp mp , lineedit
+debuff res , duration res , lineedit
+atk , handling hit , lineedit
+durability , weapon weaknes 
+element , crit resist
+mag or stats object with tooltip of its contents 
+- stats will be handle , a data class object as stats , will be in traits , and will show there the changes only , will not show unchanged stat
+
+
+
+"
+label_settings = SubResource("LabelSettings_msmjr")
+
+[node name="Label3" type="Label" parent="." unique_id=1623501334]
+layout_mode = 0
+offset_left = -482.0
+offset_top = 694.0
+offset_right = 162.0
+offset_bottom = 1411.0
+text = "unarmored : good at / weak at / 
+light , normal / pierce
+medium , magic / normal
+heavy , pierce / magic 
+unarmored , normal at all exept siege
+fortified , all atk types exept / siege 
+divine , reduce all 
+
+atk type : good at / weak at 
+normal , medium / light
+pierce , light / heavy
+magic , heavy , medium
+chaos , all armor types
+siege , weak to all exept fortified and normal
+hero , good at all exept fortified 
+"
+label_settings = SubResource("LabelSettings_msmjr")

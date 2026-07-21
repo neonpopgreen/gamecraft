@@ -1,0 +1,81 @@
+
+- gui of database : - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+	item ,/
+	armors ,/
+	char ,/
+	classes ,/
+	monster ,/
+	skill ,/
+	status effect ,/
+	weapon ,/
+	mount ,/
+	pet ,/
+	vfx ,x , skip , d pa need kasi ang goal matapos muna demo 
+	npc ,/ ,
+	quest ,/ 
+	blocks ,x , next3
+	biomes ,x , next4 , see minecraft data ,ok na 
+	premade blocks , /
+	systems , /
+	costumes , x , skip this , d pa neeed pero needed to sa ending , very needed , pag may client na na gumagawa for asthetics
+	- make the gui exist first , kahit mukhang di completo o takot na baka may kulang ,  
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+
+mounts : /
+	as pet? o hiwalay , hiwalay means parang kotse sa gta 
+	name 
+	linked pet 
+	mount model , view when mounted , random play of animation idel run or walk 
+	
+
+pet :/
+	mala monster rancher , daily/weekly task to pet ,training sesion , training duel sesion to get skill , tournament event , summon pet via key codes , speial pets  
+	pokemon , evolution , cantching , collecting 
+	lufia , ok na , walang monster sa save ko , skill transfer  
+	name 
+	evolution , level or succesor 
+	stats 
+	stats growth 
+	see pokemon , lufia
+	type 
+	catching method 
+
+vfx :/
+particle system of godot
+animation ? , tween , animation sprites , sfx , position , frames 
+
+npc :/
+special npc , gift , talk , sell , affinity , friendship , common npc with random model at saying
+stats if npc is like gta killable 
+
+quest :/
+conditions in the quest 
+place to go , killing count and what mosnter , player status and his actions
+check the list in site of list of rpg quest
+items needed
+rewards together with conditional
+dapat kaya i quest ang tutorial , means kaya ng quest handle tutorial process
+maybe the quest will be like rpgmaker  
+
+blocks :/
+texture , color override , view , collision , download , group belong 
+passage , ladder , bush , Counter(table) , damage floor , terrain tag ? 
+will do something ? like crafting_table ,  hp , tool to harvest it like shovel , 
+
+biomes :/
+blocks na kasama , trees 
+check minecraft app na wiki for biome info , analyze it
+
+premade blocks :/
+view , edit , download , spawn logic condition ,
+	
+Systems :/
+list of types , genre , custom added by player 
+scripts , view first person third person , ui sfx , music on things like bgm or short bgm like victory short bgm
+starting position ,  title screen , video intro 
+stats like vit hp etc can add stat type 
+
+Costumes:/

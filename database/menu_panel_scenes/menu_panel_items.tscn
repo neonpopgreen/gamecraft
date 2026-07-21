@@ -1,0 +1,206 @@
+[gd_scene format=3 uid="uid://ovhuiapgfhf6"]
+
+[ext_resource type="Texture2D" uid="uid://bkgjvlo4by5pm" path="res://database/images/filter.png" id="1_1uiy6"]
+[ext_resource type="Texture2D" uid="uid://b3bqtfbid8nnc" path="res://database/images/Plus.png" id="2_vykq6"]
+[ext_resource type="Texture2D" uid="uid://cdjasqaiucr02" path="res://database/images/Armors.png" id="3_vykq6"]
+[ext_resource type="PackedScene" uid="uid://bmxtwuw76wumj" path="res://database/item_panel_1.tscn" id="3_ygqeg"]
+[ext_resource type="PackedScene" uid="uid://dxm007fwr72bd" path="res://database/damage_panel.tscn" id="4_re2ef"]
+[ext_resource type="PackedScene" uid="uid://bt4bjaaqv1ne1" path="res://database/PC_DB_menu_Notes_tabified.tscn" id="5_1wtx1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jg238"]
+bg_color = Color(0.596131, 0.58707, 0.690401, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_hmm5a"]
+font_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3y855"]
+bg_color = Color(0, 0, 0.6, 1)
+corner_radius_top_right = 100
+
+[node name="Characters" type="Panel" unique_id=2087873012]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_jg238")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=831326376]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=911295560]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="list of actors" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1582180579]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.7
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/list of actors" unique_id=218195352]
+layout_mode = 2
+text = "ITEMS"
+label_settings = SubResource("LabelSettings_hmm5a")
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/list of actors" unique_id=620801546]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y855")
+text = "Skill List"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/Label" unique_id=488986962]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="MarginContainer/HBoxContainer/list of actors/Label/HBoxContainer" unique_id=641218833]
+custom_minimum_size = Vector2(23, 0)
+layout_mode = 2
+alignment_horizontal = 0
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer/list of actors/Label/HBoxContainer/AspectRatioContainer" unique_id=394486813]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+tooltip_text = "filter by , sort by ."
+texture_normal = ExtResource("1_1uiy6")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="MarginContainer/HBoxContainer/list of actors/Label/HBoxContainer" unique_id=676515291]
+custom_minimum_size = Vector2(23, 0)
+layout_mode = 2
+alignment_horizontal = 0
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer/list of actors/Label/HBoxContainer/AspectRatioContainer2" unique_id=1053810151]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+tooltip_text = "add from net/comunity "
+texture_normal = ExtResource("2_vykq6")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/HBoxContainer/list of actors" unique_id=1883911274]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/list of actors/ScrollContainer" unique_id=1574983523]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1304729940]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3" unique_id=1526246170]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer2" unique_id=358475932]
+layout_mode = 2
+text = "icon : "
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer2" unique_id=1619881887]
+layout_mode = 2
+texture = ExtResource("3_vykq6")
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer2" unique_id=1976217170]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer2" unique_id=124425178]
+layout_mode = 2
+text = "name:  "
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer2" unique_id=1241602320]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/HBoxContainer/VBoxContainer3" unique_id=1266665236]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+placeholder_text = "Description"
+wrap_mode = 1
+autowrap_mode = 1
+
+[node name="Panel" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer3" unique_id=1685381211]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel" unique_id=546890622]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Item_panel_1" parent="MarginContainer/HBoxContainer/VBoxContainer3/Panel/VBoxContainer" unique_id=1680898455 instance=ExtResource("3_ygqeg")]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=316479969]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Damage_panel" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=56348888 instance=ExtResource("4_re2ef")]
+layout_mode = 2
+size_flags_stretch_ratio = 1.11
+
+[node name="Panel" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=18606512]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/Panel" unique_id=797326237]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "effects of item when used  :
+list of 
+(stats , 
+conditionals , 
+special unique traits
+level of skill and the improvement of stats ) 
+in tabs"
+autowrap_mode = 1
+
+[node name="PC_DB_menu_Notes_tabified" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=2114837225 instance=ExtResource("5_1wtx1")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="." unique_id=1023135054]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 305.0
+offset_top = 757.0
+offset_right = -167.0
+offset_bottom = 302.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "skill type : ( first 5 item in list is the pop and recent )
+damage :
+target :
+cost type , mp/hp/stamina/ , if the cost type is cannot do it , what alternative cost type , does it reduce other stats other than chosen cost type 
+cooldown , spammable ?
+hit animation
+conditional , required weapon/stats "
+vertical_alignment = 2
+autowrap_mode = 1
