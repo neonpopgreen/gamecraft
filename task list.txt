@@ -16,11 +16,17 @@
 - problem or not , in session 39 , placing a block outside range 
 - polish performance : in session 49 , make the code as shader , fragment shader 
 - polish performance : in session 50 , make it like old map , and use shader not pool of sprite2d
+- polish performance : pag nag drag ng mabilis putol putol , sa over world map 
+- mini problem : session 56 , when Vect2i is store to dictionary , it become double , but no error even calling it no errors , might be a problem someday , storagey pag dumoble lahat pag chunk data na 
+- polish : make the creating time functional 
+- polish : make the git upload , session days ,array picture for project list window functional
+- polish : implement task list , and show the resent session in the bottom of description in project list
 - - - next todo - - - - - - - - - - - - - - - - - - - - - - - -
 - prio : low , greedy meshing and threading inside mesh class and shader in greedy meshing, kahit wag muna to kasi , make exist ang goal 
 - prio : med , saving edited blocks
 - prio : high , uv mapping 
 - prio : high , minecraft creative mode
+- feature : kenney's https://kenney.itch.io/creature-mixer , monster creator
 - rpgmv demo na , session 42 , terrain , player , mobs , quest and leveling 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 hatiin ang mga work load 
@@ -34,14 +40,163 @@ hatiin ang mga work load
 - map edit : minecraft tools list , stand alone : worldPainter , amulet , 3rd party mod :
 - two types of run , map only flying or not , run the whole game , 
 - terra forming 2 modes , painting mode zoom in , zoom out will be like overworld map ng rpg mv , one cell will be 8 will be 8*32=256 blocks wide
+- 
 - - - - - - - - - - - - - - - - - - - - - - - - - -
-session 56 , july 21 2026 tue , 1:17pm
+
+- - - next : - - - getted to all session's next 
+- clickable object and biome , need : formated na images
+- data of all object and biome , addable biome at object , ok na , session 62 , aug 6
+- try adding a tileset tile 
+- try json to save biome data , ok , session 62 , aug 6
+- dl vid tutorial of tileset , ok noon pa later than session 62
+- next : over world editor of rpgmv , biome , mountain etc , make it epic fantasy theme drawing old paper brown ink 
+ folder : game_name , inside : folder biome 
+- lagyan na ng main scene tapos nasa project list na yung main scene , 
+- yung main scene completuhin mona , reading all projects , project folder default path and other path , create new project
+-create new project , inside proj folder is a settings of a project in json 
+- - - /next - - - - - - - - - - - - - - - - - -
+
+- make the project list scene functional , doing 
+- create a flow chart
+- dl flowchart to this pc 
+- project data structure , 
+	project_name ,#bbcode 
+	icon,
+	modified_date ,
+	version ,
+	created_date,
+	size,
+	creating_time,
+	git_upload_date,
+	session_in_days,
+	path,
+	images:[],
+- create bogus proj folder for serch projlist to test it 
+- priority : "adding new project system"
+- do some story 
+- gym  
+
+next 
+- make the item list clickable ,doing
+- make the proj_info_viewer , have fill method , doing 
+- make it when clicked , will show data 
+- test all data shown 
+
+session 68 , aug 21 2026 , 9:48pm - 
+- make the item list clickable ,doing\
+- make the proj_info_viewer , have fill method , doing 
+- test all data shown 
+
+session 67 , aug 20 2026 , 8pm putol putol 12:43
+- read all files with projdata json , and add it to the list , ok na , 10:48
+- refresh when added a project , okna 11:17pm
+- this session the loading of .net  having problems , ok na , ni restart ko ang lappy , ganun pala pag matagal na natengga , nag si cd ang mouse pag na load , yung ssd ata naka rest 
+- color coded list, ok na 
+- make the item list clickable ,doing
+- make the proj_info_viewer , have fill method , doing 
+
+session 66 , aug 19 2026 , 9:10pm - 12:09
+- confirm button
+check if may project name 
+check if may same folder , if meron , create the folder with numbering 
+create the data json 
+and add all default data , player can shoose what default data , pang pokemon ba or etc
+- gumawa ng bagong sigleton about images importing 
+- ok na ang creating ,
+
+
+
+session 65 , aug 18 2026 , 11pm - 12:45pm
+- 9 days na pala kong di nag gogodot , nag break ako para ma refresh motivationko pero parang lalo ako napalayo sa godot 
+- ayaw ko simulan to , i dont have the motivation , basta binuksan ko lang to to push my self
+- "adding new project system"
+- getting a picture using filedialog node , adjust the file dialog parameters , ok na 
+- added data structure of new project system  
+
+session 64 , aug 9 2026 , 5pm-11pm , onti lang nagawa , d ko motivated at fb lang ako medyo sayang , bukas iba nalang priority (like gym and story) kasi , baka burn out na ako 
+- priority : "adding new project system" :
+	add folder based on name
+	add datajson
+	add all default files 
+- popup , done
+- 
+
+
+session 63 , aug 8 2026 , 5:30pm - 10:30pm
+- planning the system , without using flow chart , just obsedian
+- na create ko na ang flow ng simula 
+- pag kumidlat ng malakas malamang wag sya , sya kasi nasaisip ko pag umuulan 
+- pag kumidlat ng dalawa malakas noticable pwede sya , pag wala ibig sabihin wala to guniguni ko lang , dapat ko ng itigil ang ganitong mindset tuwing umuulan   
+- nawalan ng data
+- searching all json data , done
+- add new proj button , done
+- setting button , done 
+
+session 62 , aug 6 2026 , 4:30pm - 
+- napush ko ang sarili sa pag gawa in esy way pero ayaw ko parin 
+- lito ako kung ano gagawin 
+- gumawa ng data structure sa biome_object , 7pm tapos na 
+- maliit lang nagawa ko ngayun pero matrabaho at nakakalito ang mga data , tapos mag babago pa strycture ng data , sa una lang to , to make it exist first 
+
+session 61 , aug 52 2026 , 5:47pm - 
+- inutil ako nung nakaraaang araw walang gannap 
+- kung ano lang magawako ngayun , lito ako kung ano uunahin
+- search : pwede ba array ang i save as json ?
+- gumawa ng data structure para sa biome , inayus ang biome icons 
+
+session 60 , aug 3 2026 , 10:13pm - saglit lang 
+- dl and search tileset and map samples and cursor pointer
+- tip : wag muna asikasuhin ang tilemap kasi matagal pa bago magawa yun 
+- watch tilemap tutorial
+
+session 59 , aug 2 2026 , 4:25pm - 
+- remove whileloop in tilemap pointer by division , done working na , 4:33pm
+- - - next - - -
+- search and ai image the , pero sa ngayun rpgmv tiles muna
+- search alternative tileset for rpg maker any version 
+- search tile pointer image , advance war pointer ? 
+- format the texture of object and biome 
+- data of all object and biome , addable biome at object , done
+- dl tilemap layer tutorial , nood meron na ako nun ehh 
+- inaantok na ako tiugil ko nato 8:37
+
+session 58 , aug 1 2026 , 5:00pm - 
+- will do move of camera in map editor
+- - - done - - - 
+- make the intro params in canvas layer 
+- make the cam move by dragging , nng ako ang gumawa antagal pero nagawa ko kaso narapid switching yung tama at maling values naga vibrate , ginamitan ko ng google ai ayun ok na hahaha
+- nilagay s cam yung code ng pag move nya , tapos inayus ko kasi d gumagana , natuto ng get set , 
+- make the pointer adapt to camera position , done
+- zoom of camera ,done
+- problem : pointer of tilemap must addapt to zoom , zoom only updates when move ? no yung print kasi naka depend sa mouse motion kaya ganon , done na solve na haha hirap 
+- end 7:25pm , dumating sila mama , magiging busy nanaman
+- salamat sa dyos haha hirap alamin yung moving the tilemap layer's pointer based on zoom , hindi sakto pero sa tulong ng canselation technique na natutunan sa deckbuilding sa ygo , at pag search ng "when change the cam2d to zoom out , how to addapt it to for myhow to move camera by dragging in godot" , na division pala hindi multiplication , at canselation naman sa pag divide ng zoom sa lahat na ang sagot ay yung mouse pointer lang hinsi kasama ang cam 2d position , 9:39pm 
+
+
+session 57 , july 31 2026 , 10 days na nakalipas , 11:00pm-11:40pm 
+- - - reason - - -
+- puro review exam kasi , ilang days na hindi nag godot
+- puro project sa software dev gamit godot
+- - - doing - - -
+- tapos na ang json kaya d na alam ang gagawin , pinilit ko buksan kahit doubt ako , planning muna ng todo siguro or hanap sa mga last session
+- inisip kung camera 2d ang gagamitin o control node nalang , ang conclusion ay dapat camera kasi ang tile map ay 2d node so need nya 2d camera
+- sawakas salamat papa god , kanina d ko gagawin mag castle figt ako pero pinilit ko gawin nalang , nag simula sa visit then observe view things read the task list then ginawa ko na 
+- - - todo - - -
+- lagytan ng camera at dapat nakaka move, pending
+- search : why when added a camera2d the control node gui is like not on the whole screen like it is used to be  , ok na need nya canvas layer 
+- make the cam move using middle mouse 
+- todo in session 54 , 53 , 49s advice in mapping
+
+session 56 , july 21 2026 tue , 1:17pm ,pumasok sa school ,  8:10pm-12:30pm
+- gabi , nag push part 2 sa git , ang haba na pala ng nagawa ko , dami changes , ang layo na ng narating haha goods to from session 15 (1st push) to session 56 , 41 session ang nagawa , yehey ! yay !
 - tapusin ang add_data_to_json()
 - test the json script 
 - - - test - - -
-- write a new json , then do it again 
-- replace func 
-- add data to json func 
+- write a new json , then do it again , done
+- replace func , test by none existent json path , and existing json , and while the json is opened(by notepad) , ok 
+- add data to json func , test by none existent json path (nagkaerror pero na fix ko , gumagawa ng dict kahit failed yung json file getting , returns empty kasi ehh so pag empty return false dapat), and existing json , the dict to add is .. , same and different and update , ok na
+- test the json if it can store Vect2i and other vect and even the class ,it works , but the class is as string "<Marker2D#27866957263>" shocking kasi kahit ulitin ko ganun parin ang string , hindi nag baabgo na expected ko kasi string lang sya at random ang name nun 
+- mini problem : when Vect2i is store to dictionary , it become double , but no error even calling it no errors
 
 session 55 , july 20 2026 mon , 5:30pm - 7:30pm ,putol kumain
 - continue json script
@@ -63,7 +218,7 @@ session 53 , july 17 2026 , 11pm - 11:36 pm
 -  kumuha gamot kaya ginabi na 
 - 11:36pm na kaya matulog na ako mag rereview pa ako kasi prelim exam na 
 - - - todo - - - 
-- clickable object and biome
+- clickable object and biome 
 - data of all object and biome , addable biome at object 
 - try adding a tileset tile 
 - try json to save biome data
@@ -103,7 +258,7 @@ session 49 , july 13 2026 mon , 5:26pm
 - tuloy ang painting 
 - optimize the script to be a shader 
 - done : brush image , 6:53pm natapos 
-- nest : over world editor of rpgmv , biome , mountain etc , make it epic fantasy theme drawing old paper brown ink 
+- next : over world editor of rpgmv , biome , mountain etc , make it epic fantasy theme drawing old paper brown ink 
 - checking rpg mv overworld editor 
 
 session 48 , july 11 2026 , 7:45pm - 11:36pm , putolputol at saglit lang nagawa mga 30 mins 
@@ -124,7 +279,7 @@ session 46 ,july 8 2026 , 1hr lang to d nag code just doing thing related to thi
 - look for image editor  
 
 
-session 45 , july 6 2026 tue , 1:37pm - 3:30pm  , 
+session 45 , july 7 2026 tue , 1:37pm - 3:30pm  , 
 - first map ,flat , height map , what biome , size
 - next : minecraft mode , coding na to haha yes d na ako mgangangapa ng task , nitong mga araw kasi confused ako kaya takot buksan godot haha
 - next : top down terraforming , with mini first person cam , kelangan ko dito ng reference siguro ito muna bago minecraft mode kasi , kelangan mo ng place to build diba , yun ang process kasi 

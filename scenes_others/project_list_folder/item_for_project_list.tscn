@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dkw7ihp7d8fhu"]
+
+[ext_resource type="Script" uid="uid://beni61a3se0k7" path="res://scenes_others/project_list_folder/item_for_project_list.gd" id="1_4sj13"]
+[ext_resource type="Texture2D" uid="uid://dd8loilompkx3" path="res://database/images/Items.png" id="1_lltbx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3xh6k"]
+resource_local_to_scene = true
+bg_color = Color(0.4809937, 0.46911746, 0.57812196, 1)
+
+[node name="item" type="Panel" unique_id=256672700]
+custom_minimum_size = Vector2(0, 21.695)
+theme_override_styles/panel = SubResource("StyleBoxFlat_3xh6k")
+script = ExtResource("1_4sj13")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=362550814]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icon" type="TextureRect" parent="HBoxContainer" unique_id=1108952288]
+layout_mode = 2
+texture = ExtResource("1_lltbx")
+expand_mode = 2
+
+[node name="Number" type="Label" parent="HBoxContainer" unique_id=52481103]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+text = "001 :"
+clip_text = true
+
+[node name="Name" type="Label" parent="HBoxContainer" unique_id=628575051]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "beginer tutorial"
+clip_text = true
+
+[node name="Button" type="Button" parent="." unique_id=2132259150]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_item_pressed"]

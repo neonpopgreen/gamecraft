@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://04xmjktod82k"]
+
+[ext_resource type="Script" uid="uid://by2k17ims8f3c" path="res://scenes_others/the_very_start_main.gd" id="1_oictc"]
+
+[node name="TheVeryStartMain" type="Node" unique_id=1257334079]
+script = ExtResource("1_oictc")

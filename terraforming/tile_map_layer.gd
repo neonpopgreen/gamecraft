@@ -1,6 +1,7 @@
 extends TileMapLayer
-@onready var sprite_2d: Sprite2D = $Sprite2D
-@onready var intro_params: Control = $"../../Intro_params"
+@onready var sprite_2d: Sprite2D = $"../Pointer"
+@onready var intro_params: Control = $"../../CanvasLayer/Intro_params"
+@onready var camera_2d_map_overworld: Camera2D = $"../Camera2DMapOverworld"
 
 
 var tilemap_pos :Vector2i
@@ -15,30 +16,36 @@ func _process(delta: float) -> void:
 	pass
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventKey:
-		if event.pressed:
-			if event.keycode == KEY_SPACE:
-				print("pressed")
-				set_cell(Vector2i(7,5),1,Vector2i(0,0))
+	#if event is InputEventKey:
+		#if event.pressed:
+			#if event.keycode == KEY_SPACE:
+				#print("pressed")
+				#set_cell(Vector2i(7,5),1,Vector2i(0,0))
 	if event is InputEventMouseMotion:
 		#sprite_2d.position = event.position
 		var tile_size_x = self.tile_set.tile_size.x
 		var tile_size_y = self.tile_set.tile_size.y
 		#event.position.x = event.position.x
-		var x_pos = event.position.x
-		var y_pos = event.position.y
+		#var x_pos = (event.position.x + camera_2d_map_overworld.position.x )* (1+(1-camera_2d_map_overworld.zoom.x))
+		var x_pos:float = camera_2d_map_overworld.position.x + ( event.position.x )/ camera_2d_map_overworld.zoom.x
+		#var y_pos = (event.position.y + camera_2d_map_overworld.position.y )* (1+(1-camera_2d_map_overworld.zoom.y))
+		var y_pos:float = camera_2d_map_overworld.position.y + ( event.position.y) / camera_2d_map_overworld.zoom.y
+		
 		#var condition
 		#if x_pos < tile_size:
 			#pass
 		var tilemap_x_pos : int 
 		var tilemap_y_pos : int
-		while(x_pos>tile_size_x):
-			tilemap_x_pos+=1
-			x_pos = x_pos-tile_size_x
+		# this while is old code , change it to division
+		#while(x_pos>tile_size_x):
+			#tilemap_x_pos+=1
+			#x_pos = x_pos-tile_size_x
+		tilemap_x_pos = x_pos/ tile_size_x
 		sprite_2d.position.x = tilemap_x_pos * tile_size_x + tile_size_x/2.0
-		while(y_pos>tile_size_y):
-			tilemap_y_pos+=1
-			y_pos = y_pos-tile_size_y
+		#while(y_pos>tile_size_y):
+			#tilemap_y_pos+=1
+			#y_pos = y_pos-tile_size_y
+		tilemap_y_pos = y_pos/ tile_size_y
 		sprite_2d.position.y = tilemap_y_pos * tile_size_y + tile_size_y/2.0
 		tilemap_pos  = Vector2i(tilemap_x_pos,tilemap_y_pos)
 			

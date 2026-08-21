@@ -1,41 +1,65 @@
 [gd_scene format=3 uid="uid://cq1xp66vfsfrm"]
 
-[ext_resource type="Texture2D" uid="uid://brcnpslwd3tly" path="res://ress/sand_tileset.png" id="1_an5wg"]
-[ext_resource type="Texture2D" uid="uid://bmi8xv0ev0ul3" path="res://ress/grass/Grass01.png" id="2_kvjgp"]
-[ext_resource type="Texture2D" uid="uid://cr0gmh3qm7exv" path="res://ress/some tiles/stuff.png" id="3_2o8wo"]
-[ext_resource type="Texture2D" uid="uid://dt122puo8wgvr" path="res://ress/grass/Grass15.png" id="3_hxxvk"]
-[ext_resource type="Texture2D" uid="uid://b7wtprifdjv8r" path="res://ress/some tiles/Lava Stones.png" id="5_hxxvk"]
-[ext_resource type="Texture2D" uid="uid://cilr1hts45qtf" path="res://ress/baum.png" id="6_m3b7b"]
+[ext_resource type="Texture2D" uid="uid://bjpyain6b1hk0" path="res://ress/Outside_A2.png" id="2_0dlub"]
+[ext_resource type="Texture2D" uid="uid://cyny5p2hhasb6" path="res://ress/World_A2 inverted.png" id="3_hxxvk"]
 [ext_resource type="Texture2D" uid="uid://dfht1dhup3f5e" path="res://ress/World_B.png" id="7_0dlub"]
-[ext_resource type="Texture2D" uid="uid://ks4yb2o6rlt" path="res://ress/World_A2.png" id="8_4pjvg"]
+[ext_resource type="Texture2D" uid="uid://dn0rb5vrxkv70" path="res://ress/World_A2.png" id="8_4pjvg"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kvjgp"]
-atlas = ExtResource("1_an5wg")
-region = Rect2(0, 0, 8, 8)
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dlub"]
+atlas = ExtResource("8_4pjvg")
+region = Rect2(216, 72, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v5s20"]
+atlas = ExtResource("2_0dlub")
+region = Rect2(432, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3b7b"]
+atlas = ExtResource("8_4pjvg")
+region = Rect2(24, 360, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hxxvk"]
-atlas = ExtResource("3_2o8wo")
-region = Rect2(69, 17, 14, 14)
+atlas = ExtResource("8_4pjvg")
+region = Rect2(24, 504, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2o8wo"]
+atlas = ExtResource("8_4pjvg")
+region = Rect2(312, 360, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4pjvg"]
-atlas = ExtResource("7_0dlub")
-region = Rect2(195, 146.17, 90, 90)
+atlas = ExtResource("8_4pjvg")
+region = Rect2(672, 288, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qqghb"]
-atlas = ExtResource("7_0dlub")
-region = Rect2(99, 145, 90, 90)
+atlas = ExtResource("8_4pjvg")
+region = Rect2(720, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tpqm8"]
 atlas = ExtResource("8_4pjvg")
-region = Rect2(576, 0, 48, 48)
+region = Rect2(624, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u6wao"]
 atlas = ExtResource("8_4pjvg")
-region = Rect2(576, 287, 48, 48)
+region = Rect2(624, 288, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pifiu"]
+atlas = ExtResource("3_hxxvk")
+region = Rect2(144, 240, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvnm8"]
+atlas = ExtResource("3_hxxvk")
+region = Rect2(288, 528, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kx6um"]
 atlas = ExtResource("7_0dlub")
 region = Rect2(0, 334, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_el71b"]
+atlas = ExtResource("7_0dlub")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_065oa"]
+atlas = ExtResource("7_0dlub")
+region = Rect2(96, 0, 48, 48)
 
 [node name="overworld gui" type="Control" unique_id=215126832]
 layout_mode = 3
@@ -98,21 +122,21 @@ size_flags_vertical = 3
 [node name="TextureRect2" type="TextureRect" parent="Panel/VBoxContainer/Panel/BoxContainer/ScrollContainer/HBoxContainer" unique_id=1567706409]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-texture = ExtResource("2_kvjgp")
+texture = SubResource("AtlasTexture_0dlub")
 expand_mode = 1
 stretch_mode = 4
 
 [node name="TextureRect4" type="TextureRect" parent="Panel/VBoxContainer/Panel/BoxContainer/ScrollContainer/HBoxContainer" unique_id=366689933]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-texture = ExtResource("3_hxxvk")
+texture = SubResource("AtlasTexture_v5s20")
 expand_mode = 1
 stretch_mode = 4
 
 [node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/Panel/BoxContainer/ScrollContainer/HBoxContainer" unique_id=1183523583]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-texture = SubResource("AtlasTexture_kvjgp")
+texture = SubResource("AtlasTexture_m3b7b")
 expand_mode = 1
 stretch_mode = 4
 
@@ -126,7 +150,7 @@ stretch_mode = 4
 [node name="TextureRect5" type="TextureRect" parent="Panel/VBoxContainer/Panel/BoxContainer/ScrollContainer/HBoxContainer" unique_id=2094374547]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-texture = ExtResource("5_hxxvk")
+texture = SubResource("AtlasTexture_2o8wo")
 expand_mode = 1
 stretch_mode = 4
 
@@ -181,13 +205,19 @@ texture = SubResource("AtlasTexture_u6wao")
 expand_mode = 1
 stretch_mode = 4
 
+[node name="TextureRect5" type="TextureRect" parent="Panel/VBoxContainer/Panel2/BoxContainer/ScrollContainer/HBoxContainer" unique_id=1037267357]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = SubResource("AtlasTexture_pifiu")
+expand_mode = 1
+stretch_mode = 4
+
 [node name="TextureRect6" type="TextureRect" parent="Panel/VBoxContainer/Panel2/BoxContainer/ScrollContainer/HBoxContainer" unique_id=1940193593]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-texture = ExtResource("6_m3b7b")
+texture = SubResource("AtlasTexture_pvnm8")
 expand_mode = 1
 stretch_mode = 4
-flip_v = true
 
 [node name="TextureRect7" type="TextureRect" parent="Panel/VBoxContainer/Panel2/BoxContainer/ScrollContainer/HBoxContainer" unique_id=2117503519]
 custom_minimum_size = Vector2(50, 50)
@@ -195,3 +225,31 @@ layout_mode = 2
 texture = SubResource("AtlasTexture_kx6um")
 expand_mode = 1
 stretch_mode = 4
+
+[node name="TextureRect8" type="TextureRect" parent="Panel/VBoxContainer/Panel2/BoxContainer/ScrollContainer/HBoxContainer" unique_id=506107634]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = SubResource("AtlasTexture_el71b")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TextureRect9" type="TextureRect" parent="Panel/VBoxContainer/Panel2/BoxContainer/ScrollContainer/HBoxContainer" unique_id=1072235595]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = SubResource("AtlasTexture_065oa")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Panel3" type="Panel" parent="Panel/VBoxContainer" unique_id=1218087018]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Panel3" unique_id=1747231525]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "view of the selected chunk , can be hover , can be expand to edit the parameters "
+autowrap_mode = 2

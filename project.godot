@@ -15,12 +15,14 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="GameCraft \"RPG-CRAFT\""
+run/main_scene="uid://04xmjktod82k"
 config/features=PackedStringArray("4.6", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 MyJson="*uid://cvxu0tfx0mxd5"
+ImportImage="*uid://7g3lawvaj2dp"
 
 [dotnet]
 

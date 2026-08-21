@@ -510,10 +510,39 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-text = "clock2"
+text = "block2"
 autowrap_mode = 1
 
 [node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer2/TextureRect2" unique_id=936198804]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+texture_normal = ExtResource("6_w3ymv")
+stretch_mode = 0
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer2" unique_id=76303424]
+layout_mode = 2
+texture = ExtResource("4_dg1o7")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer2/TextureRect3" unique_id=919307779]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+text = "premade"
+autowrap_mode = 1
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer2/TextureRect3" unique_id=870311653]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -575,7 +604,7 @@ grow_vertical = 2
 layout_mode = 2
 tooltip_text = "hit percent , by accuracy , by weapon proficiency , by dex "
 mouse_filter = 0
-text = "terrain type : "
+text = "terrain gen type : "
 
 [node name="OptionButton" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer2/Panel2/VScrollBar/VBoxContainer/HBoxContainer/VBoxContainer/Panel9/VBoxContainer" unique_id=1331051861]
 layout_mode = 2
